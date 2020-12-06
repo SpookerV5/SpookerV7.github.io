@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SpookerV5.github.io</id>
     <title>Lenger的后花园</title>
-    <updated>2020-12-04T07:49:36.842Z</updated>
+    <updated>2020-12-06T17:17:54.248Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SpookerV5.github.io"/>
     <link rel="self" href="https://SpookerV5.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://SpookerV5.github.io/images/avatar.png</logo>
     <icon>https://SpookerV5.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Lenger的后花园</rights>
+    <entry>
+        <title type="html"><![CDATA[院新媒体中心2020培训]]></title>
+        <id>https://SpookerV5.github.io/post/yuan-xin-mei-ti-zhong-xin-2020-pei-xun/</id>
+        <link href="https://SpookerV5.github.io/post/yuan-xin-mei-ti-zhong-xin-2020-pei-xun/">
+        </link>
+        <updated>2020-12-06T17:16:24.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[《北京折叠》——一个未尽的故事]]></title>
         <id>https://SpookerV5.github.io/post/lesslessbei-jing-zhe-die-greatergreater-yi-ge-wei-jin-de-gu-shi/</id>
