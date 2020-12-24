@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SpookerV5.github.io</id>
     <title>Lenger的后花园</title>
-    <updated>2020-12-13T06:38:29.077Z</updated>
+    <updated>2020-12-24T04:59:18.675Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SpookerV5.github.io"/>
     <link rel="self" href="https://SpookerV5.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://SpookerV5.github.io/images/avatar.png</logo>
     <icon>https://SpookerV5.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Lenger的后花园</rights>
+    <entry>
+        <title type="html"><![CDATA[2020年度总结]]></title>
+        <id>https://SpookerV5.github.io/post/2020-nian-du-zong-jie/</id>
+        <link href="https://SpookerV5.github.io/post/2020-nian-du-zong-jie/">
+        </link>
+        <updated>2020-12-24T04:57:35.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[近况公告板&欢迎]]></title>
         <id>https://SpookerV5.github.io/post/jin-kuang-gong-gao-ban-andhuan-ying/</id>
