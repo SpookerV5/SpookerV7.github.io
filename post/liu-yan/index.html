@@ -8,7 +8,7 @@
 For example:
 站点名称：Lenger的后花园
 站点地址：https://spookerv5.github.io/
-头像： https://i.lol..." />
+头像：https://i.loli..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://SpookerV5.github.io/styles/main.css">
@@ -320,7 +320,7 @@ For example:
         <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
                     src='https://SpookerV5.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         <div class="avatar-border">
-            <img src="https://SpookerV5.github.io/images/avatar.png?v=1611316949886" class="avatar">
+            <img src="https://SpookerV5.github.io/images/avatar.png?v=1611318681042" class="avatar">
         </div>
         <div class="sitename">Lenger的后花园</div>
         <span class="describtion" data-text='["如果是你的话，一定没问题"]'>&nbsp;</span>
@@ -699,7 +699,7 @@ For example:
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611316949886">\
+                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611318681042">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -712,7 +712,7 @@ For example:
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611316949886">\
+                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611318681042">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -1107,8 +1107,8 @@ For example:
 <p>加友链请到本页/友人帐下方回复哦<br>
 For example:<br>
 站点名称：Lenger的后花园<br>
-站点地址：https://spookerv5.github.io/<br>
-头像： https://i.loli.net/2021/01/22/yqbfsgI4UQ65kTe.png<br>
+站点地址：<a href="https://spookerv5.github.io/">https://spookerv5.github.io/</a><br>
+头像：<a href="https://i.loli.net/2021/01/22/yqbfsgI4UQ65kTe.png">https://i.loli.net/2021/01/22/yqbfsgI4UQ65kTe.png</a><br>
 站点描述：如果是你的话，一定没问题</p>
 
             </div>
@@ -1214,14 +1214,14 @@ For example:<br>
             verify: false,
             avatar: 'retro',
             pageSize: 10,
-            placeholder: '既然来了，何不畅所欲言呢？',
+            placeholder: '快来写评论吧！支持markdown的！  (｡･∀･)ﾉﾞ',
             visitor: true, // 阅读量统计
             recordIP: true,
             path: curpath //[重点] 记得添加path路径
         });
     </script>
     <script type="text/javascript">
-        var jrsc = '既然来了，何不畅所欲言呢？';
+        var jrsc = '快来写评论吧！支持markdown的！  (｡･∀･)ﾉﾞ';
         jinrishici.load(function (result) {
             // 自己的处理逻辑
             jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
