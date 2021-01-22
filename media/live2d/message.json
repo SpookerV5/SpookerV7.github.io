@@ -10,11 +10,11 @@
         },
         {
             "selector": ".search-input",
-            "text": ["只阔以搜索标题哦"]
+            "text": ["在找什么东西呢，需要帮忙吗？"]
         },
         {
             "selector": ".avatar",
-            "text": ["快来交换友链吧！"]
+            "text": ["这是我喜欢的人呢(〃∀〃)！"]
         }
     ],
     "click": [
