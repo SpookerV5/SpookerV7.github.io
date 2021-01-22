@@ -268,17 +268,17 @@
     
     
     <script>
-        let shareChoice = false
+        let shareChoice = true
     </script>
     
     
     <script>
-        let donateChoice = false
+        let donateChoice = true
     </script>
     
     
     <script>
-        let searchChoice = false
+        let searchChoice = true
     </script>
     
     <script>let postsnum = 0;</script>
@@ -328,10 +328,16 @@
         <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
                     src='https://SpookerV5.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         <div class="avatar-border">
-            <img src="https://SpookerV5.github.io/images/avatar.png?v=1611292830588" class="avatar">
+            <img src="https://SpookerV5.github.io/images/avatar.png?v=1611293139006" class="avatar">
         </div>
         <div class="sitename">Lenger的后花园</div>
         <span class="describtion" data-text='["如果是你的话，一定没问题"]'>&nbsp;</span>
+        
+        <div class="search">
+            <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
+            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+            <div class="search-results"></div>
+        </div>
         
     <div class="share-button">
         <span>社交按钮</span>
@@ -452,7 +458,7 @@
                 </div>
                 
             </div>
-            <div class="copyright" style="color:white;text-align: center;"><a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20201202" target="_blank"> 20210001号</a>
+            <div class="copyright" style="color:white;text-align: center;"><a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20210123" target="_blank"> 20210123号</a>
             </div>
         </div>
 
@@ -697,7 +703,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611292830588">\
+                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611293139006">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -710,7 +716,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611292830588">\
+                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611293139006">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -1109,13 +1115,42 @@
 <p>简介：学习掌握Keil C单片机编程调试环境、Protel电子设计软件的原理图和印刷版电路图设计方法；参照研究室现有的汽车电动轮电子驱动控制器设计资料，针对选定的一个超微汽车轮毂电机进行电子驱动控制器的原理图、印刷版电路图，购买电子元器件进行焊装，组装电子驱动控制器硬件；参照研究室现有的汽车轮毂电机电子驱动控制器设计资料和程序、进行电子驱动控制器单片机编程；对电子驱动控制器软件进行调试，实现控制；<br>
 <img src="https://i.niupic.com/images/2020/12/13/96Uv.jpg" alt="" loading="lazy"></p>
 <p>emmm，所以我目前在学习51单片机，开发板已购入，在B站找郭天祥的视频学习</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=5299097&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=5299097&auto=0&height=66"></iframe>
 <p>最近看了《凉宫春日的消失剧场版》（<s>巨长版</s> ），萨蒂钢琴曲《裸体歌舞》印象深刻，可能人们还是喜欢一切如故吧，心疼大萌神。<br>
 <img src="https://i.niupic.com/images/2020/12/13/96Uw.png" alt="" loading="lazy"></p>
 
             </div>
             <hr style="width: 80%;">
             
+            <div class="sharebtnContainer">
+                <button type="button" class="sharebtn">转载分享</button>
+            </div>
+            <div class="shareContainer">
+                <div class="share" style="height:30px;background: white;">
+                    <a class="qq" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/QQ.png" alt=""></i></a>
+                    <a class="wechat" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/wechat.png" alt=""></i></a>
+                    <a class="weibo" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/weibo.png" alt=""></i></a>
+                    <a class="qzone" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/qzone.png" alt=""></i></a>
+                    <a class="douban" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/douban.png" alt=""></i></a>
+                    <a class="facebook" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/facebook.png" alt=""></i></a>
+                    <a class="twitter" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/twitter.png" alt=""></i></a>
+                </div>
+            </div>
+            
+            
+            <div class="donateContainer">
+                <img src="https://SpookerV5.github.io/media/images/donate.png" alt="" class="donateImg">
+            </div>
+            <div class="donateContainer">
+                <img src="" alt="" class="donate">
+            </div>
             
             <div class="postfooter">
                 <ul class="post-copyright">
