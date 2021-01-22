@@ -116,14 +116,14 @@
         <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
                     src='https://SpookerV5.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         <div class="avatar-border">
-            <img src="https://SpookerV5.github.io/images/avatar.png?v=1611293139006" class="avatar">
+            <img src="https://SpookerV5.github.io/images/avatar.png?v=1611312388423" class="avatar">
         </div>
         <div class="sitename">Lenger的后花园</div>
         <span class="describtion" data-text='["如果是你的话，一定没问题"]'>&nbsp;</span>
         
         <div class="search">
             <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
-            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+            <input type="text" class="search-input" placeholder="询问伊斯特瓦尔文章标题">
             <div class="search-results"></div>
         </div>
         
@@ -240,7 +240,7 @@
                 <div id="vistornum" style="margin:0">
                     <span id="busuanzi_container_site_uv">
                         <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> 总访问量:<span
-                            id="busuanzi_value_site_pv"></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+                            id="busuanzi_value_site_uv"></span>&nbsp;&nbsp;|&nbsp;&nbsp;
                         <i class="fa fa-user-o" aria-hidden="true"></i> 访问人数:<span id="busuanzi_value_site_uv"></span>
                     </span>
                 </div>
@@ -491,7 +491,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611293139006">\
+                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611312388423">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -504,7 +504,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611293139006">\
+                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611312388423">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -1033,6 +1033,69 @@
                 
             </div>
             
+                <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+</head>
+
+<body>
+    <div class="miniMode">
+        <meting-js id="myaplayer" server="netease" type="playlist" fixed="true" order="default">
+        </meting-js>
+    </div>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<script>
+    function aplayerInit() {
+        var aplayerid = "7831825865";
+        var aplayerserver = "tencent";
+        var aplayerorder = "default";
+        var aplayerautoplay = "false";
+        var aplayer = $("#myaplayer");
+        aplayer.attr("server", aplayerserver);
+        aplayer.attr("id", aplayerid);
+        aplayer.attr("order", aplayerorder);
+        if (aplayerautoplay == "true")
+            aplayer.attr("autoplay", "true");
+    }
+    aplayerInit();
+</script>
+
+<script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/Aplayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<script>
+    function aplayerbtnInit() {
+        var player = document.querySelectorAll('meting-js')[0].aplayer;
+        if(player==undefined)return false;
+        player.lrc.hide();
+        var mbabtn = $("#mbaplayer");
+        if (player.paused == false) {
+            mbabtn.removeClass("fa-play-circle-o");
+            mbabtn.addClass("fa-pause-circle");
+        } else {
+            mbabtn.addClass("fa-play-circle-o");
+            mbabtn.removeClass("fa-pause-circle");
+        }
+    }
+
+    function aplayerPlay() {
+        var player = document.querySelectorAll('meting-js')[0].aplayer;
+        var mbabtn = $("#mbaplayer");
+        if (player.paused == true) {
+            player.play();
+            mbabtn.removeClass("fa-play-circle-o");
+            mbabtn.addClass("fa-pause-circle");
+        } else {
+            player.pause();
+            mbabtn.addClass("fa-play-circle-o");
+            mbabtn.removeClass("fa-pause-circle");
+        }
+    }
+</script>
+            
         </div>
         <div id="bg">
         </div>
@@ -1116,7 +1179,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611293139006">\
+                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611312388423">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -1129,7 +1192,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611293139006">\
+                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1611312388423">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
