@@ -1,28 +1,228 @@
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="description" content="
+我对普通的人类没有兴趣，如果你们之中有宇宙人、未来人或超能力者，请尽管来找我玩吧！以上。
+
+以下内容不含与主线相关的明显剧透，可以放心食用（
+
+
+关于我对小说本身的理解全都在 α-《凉宫春日系列》读后杂谈 中，本篇读后杂谈，因此真的更像是..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://SpookerV5.github.io/styles/main.css">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
-    <link rel="stylesheet" href="https://SpookerV5.github.io/styles/main.css">
-
-    <!-- pjax 加载valine文件 -->
-    <script src="https://SpookerV5.github.io/media/js/valine.min.js"></script>
-    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <meta name="description" content="如果是你的话，一定没问题" />
-    <meta http-equiv="x-pjax-version" content="v123">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <!-- 数学公式 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css"
+        integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"
+        integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"
+        integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous">
+        </script>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            },
+            {
+                left: "$",
+                right: "$",
+                display: false
+            }
+            ]
+        });
+    </script>
+    
     <title>Lenger的后花园</title>
+    
+    <style>
+        .markdownIt-TOC {
+            margin-left: 28%;
+            padding-left: 2px;
+            width: 80%;
+        }
+
+        .markdownIt-TOC li {
+            padding-left: 8%;
+        }
+    </style>
+    
 </head>
 
-
 <body>
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+    <div id="domainname" style="display:none">https://SpookerV5.github.io</div>
     <!-- 响应式布局，针对PC端内容显示 -->
     <div id="content">
-        <div class="nav-large">
+        <div>
+            <div id="bar">
+                <head>
+  <!-- 引入Bootstrap核心样式文件 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/bootstrap.min.css">
+</head>
+<style>
+  .navmobile {
+    z-index: 15;
+    max-height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .navbar {
+      max-width: 100vw;
+    }
+  }
+
+  @media screen and (max-width:1200px) and (min-width: 768px) {
+    @media (min-width: 768px) {
+      .navbar-nav {
+        float: right;
+        margin: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .mbapspan {
+      padding: 0;
+    }
+  }
+</style>
+<div class="pjaxloading"  onclick="pjaxloadingClose()">
+  <div class="loadingbackground"></div>
+  <div id="loading">
+    <div class="loading">
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
+        aria-expanded="false" id="barbutton">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a data-pjax class="navbar-brand" href="https://SpookerV5.github.io">Lenger的后花园&nbsp;&nbsp;|</a>
+      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
+          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="barmenu">
+      <ul class="nav navbar-nav">
+        
+        
+        <li>
+          <a data-pjax href="/">
+            首页
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/archives">
+            归档
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/tags">
+            标签
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="https://SpookerV5.github.io/post/liu-yan">
+            留言
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/post/about">
+            关于
+          </a>
+        </li>
+        
+        
+        
+        <li><a href="https://spookerv5.github.io/atom" target="_blank">
+            RSS
+          </a></li>
+        
+        
+        
+        <li><a data-pjax href="https://SpookerV5.github.io/talk">说说</a></li>
+        
+          
+        <li><a data-pjax href="https://SpookerV5.github.io/friends">友链</a></li>
+
+        
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!-- 引入jQuery核心js文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script>
+    let btstate = false;
+    var bt = $("#barbutton");
+    var bm = $("#barmenu");
+    bt.click(function () {
+      dropdown();
+    })
+    function dropdown() {
+      console.log(btstate);
+      //下拉
+      if (btstate == false) {
+        bt.removeClass("collapsed");
+        bt.attr("aria-expanded", "true");
+        bm.attr("aria-expanded", "true")
+        bm.fadeIn(700);
+        btstate = true;
+      }
+      else {
+        bt.addClass("collapsed");
+        bt.attr("aria-expanded", "false");
+        bm.removeClass("in");
+        bm.hide();
+        bm.attr("aria-expanded", "false");
+        btstate = false;
+      }
+    }
+  </script> 
+            </div>
             <div class="row">
-                
                 <div class="side"><head>
     <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://SpookerV5.github.io/styles/main.css">
@@ -876,6 +1076,7 @@
         }
     </script>
     </div>
+                
                 <div id="tab1" class="tab">
                     <div class="bars">
                         <span></span>
@@ -885,236 +1086,181 @@
                     <div class="close"></div>
                 </div>
                 <div class="col-md-1 col-lg-3"></div>
-                <div class="mobilebar"><head>
-  <!-- 引入Bootstrap核心样式文件 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/bootstrap.min.css">
-</head>
-<style>
-  .navmobile {
-    z-index: 15;
-    max-height: 40vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+                    <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/font-awesome.css">
 
-  @media screen and (max-width: 1200px) {
-    .navbar {
-      max-width: 100vw;
-    }
-  }
-
-  @media screen and (max-width:1200px) and (min-width: 768px) {
-    @media (min-width: 768px) {
-      .navbar-nav {
-        float: right;
-        margin: 0;
-      }
-    }
-  }
-
-  @media screen and (max-width:768px) {
-    .mbapspan {
-      padding: 0;
-    }
-  }
-</style>
-<div class="pjaxloading"  onclick="pjaxloadingClose()">
-  <div class="loadingbackground"></div>
-  <div id="loading">
-    <div class="loading">
-    </div>
-  </div>
-</div>
-<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
-        aria-expanded="false" id="barbutton">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a data-pjax class="navbar-brand" href="https://SpookerV5.github.io">Lenger的后花园&nbsp;&nbsp;|</a>
-      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
-          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="barmenu">
-      <ul class="nav navbar-nav">
-        
-        
-        <li>
-          <a data-pjax href="/">
-            首页
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/archives">
-            归档
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/tags">
-            标签
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="https://SpookerV5.github.io/post/liu-yan">
-            留言
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/post/about">
-            关于
-          </a>
-        </li>
-        
-        
-        
-        <li><a href="https://spookerv5.github.io/atom" target="_blank">
-            RSS
-          </a></li>
-        
-        
-        
-        <li><a data-pjax href="https://SpookerV5.github.io/talk">说说</a></li>
-        
-          
-        <li><a data-pjax href="https://SpookerV5.github.io/friends">友链</a></li>
-
-        
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-
-  <!-- 引入jQuery核心js文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-  <script>
-    let btstate = false;
-    var bt = $("#barbutton");
-    var bm = $("#barmenu");
-    bt.click(function () {
-      dropdown();
-    })
-    function dropdown() {
-      console.log(btstate);
-      //下拉
-      if (btstate == false) {
-        bt.removeClass("collapsed");
-        bt.attr("aria-expanded", "true");
-        bm.attr("aria-expanded", "true")
-        bm.fadeIn(700);
-        btstate = true;
-      }
-      else {
-        bt.addClass("collapsed");
-        bt.attr("aria-expanded", "false");
-        bm.removeClass("in");
-        bm.hide();
-        bm.attr("aria-expanded", "false");
-        btstate = false;
-      }
-    }
-  </script> 
+<body>
+    <div class="allcontent" id="postdetail">
+        <div class="postshow postpadding" style="padding-bottom: 0;">
+            
+            <div class="postdetailimg">
+                <img src="https://img.rruu.net/image/602a0e1b551b5)" class="postimage" style="cursor:auto">
+            </div>
+            <div class="postinfo-detail">
+                <div class="postdate"><i class="fa fa-calendar"></i>2021-02-15</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 9 min read</div>
+                <div class="posttag">
+                    
                 </div>
-                <div id="main" class="col-xs-12 col-sm-12 col-md-11 col-lg-7">
-                    <!-- 移动端 -->
-                    <div class="mobilebar">
-                        <!-- 移动端欢迎页 -->
-<div class="welcome">
-    <div class="avatar-border">
-        <img src="https://SpookerV5.github.io/images/avatar.png?v=1613369644078" class="avatar">
+            </div>
+            
+        <div id="articlecontent">
+            <div id="texttitle" style="text-align: center">
+                <h2 id="ptitle">β-《凉宫春日系列》读后杂谈</h2>
+                <!-- id 将作为查询条件 -->
+                <div id="pl" style="display:none">https://SpookerV5.github.io/post/v-lesslessliang-gong-chun-ri-xi-lie-greatergreater-du-hou-za-tan/</div>
+                <div id="rootaddr" style="display:none">https://SpookerV5.github.io</div>
+                <span id="hotnum">
+                    <h4><i class="fa fa-eye" aria-hidden="true" style="color: #FF8C00;"></i>&nbsp;&nbsp;热度</i>: <i
+                            class="hotnum">loading...</i></h4>
+                </span>
+            </div>
+            <div class="text ">
+                <blockquote>
+<p>我对普通的人类没有兴趣，如果你们之中有宇宙人、未来人或超能力者，请尽管来找我玩吧！以上。</p>
+</blockquote>
+<p>以下内容不含与主线相关的明显剧透，可以放心食用（</p>
+<hr>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=32451609&auto=0&height=66"></iframe>
+<p>关于我对小说本身的理解全都在 α-《凉宫春日系列》读后杂谈 中，本篇读后杂谈，因此真的更像是我的感想，记录于此，希望随着年龄的增加，自己也能对这部系列作品有更深刻的感受。</p>
+<hr>
+<p>掀起轻改浪潮的现象级作品、新世纪改变业界的动画作品、曾经号称一亿人的作品，《凉宫春日系列》。在系列第一本小说首次出版的 17 年后，在初版动画放送的 15 年后，我终于接触到了这部作品，而我首次知晓这部作品的契机，是高中时期习题册下的摘句，现如今我已忘了句子为何，只记得引用自《凉宫春日的忧郁》，这个名字在当时给我的神秘感至今犹存。谷川流在作品命名上很有特色，一般为 凉宫春日的 OO ，而后面的词 OO 一般是有误导性的贬义词。</p>
+<figure data-type="image" tabindex="1"><img src="https://img.rruu.net/image/602a0e1b296b1" alt="" loading="lazy"></figure>
+<p>从外貌来看，这个系列其实就是青春校园恋爱喜剧，但其设定的前卫大胆即使到如今也能让人拍案叫绝。</p>
+<p>宇宙人、未来人、超能力者、神、普通人</p>
+<p>棒球、七夕、合宿、学园祭、探险、寻宝、拍电影</p>
+<p>幻想、推理、爱情、成长 ...</p>
+<p>谷川流巧妙将其融合，并用简洁而有趣的语言叙写，带来了欲罢不能的阅读体验，我基本开始阅读后以每天近一本的速度阅读，前后花了 3 周，为其中几本做了手写笔记，总之，开始了就停不下来！而京都动画的改编也使人物形象变得更加丰满，尤其是 06 版的乱序和 09 版对漫无止境的八月的制作，使得凉宫系列成为了校园系动画独特的存在。</p>
+<p>最重要的是，从凉宫春日身上，可以得到共鸣。</p>
+<p>如果从世俗的眼光去看凉宫春日这种人，那么得到的答案一定如此：她不过就是一个自以为是而又不甘平凡且中二的少女罢了。我想在日常的生活中，这种人的行事风格会被很多人所厌恶的吧。喜爱制定规则，而又厌弃遵守规则，讨厌冒险的行为，却从内心喜爱着冒险，这不就是处于青春期的高中生的思想吗？凉宫春日的任性其实也就是我在青春期所想要的吧，对于团长，如果正处于青春期的高中生，大概很难不引起共鸣，打造自己的社团，不想顾及他人感受，只想去做自己喜欢的事，让世界一定要以自己的想法运作，否则就去改变这个世界！</p>
+<figure data-type="image" tabindex="2"><img src="https://img.rruu.net/image/6029fbc6da182" alt="" loading="lazy"></figure>
+<p>可是果真如此吗？现实中又是如何呢？还记得最初的团长吗？在没有遇见阿虚之前，团长的所作所为在他人眼中都是古怪的，团长几乎连朋友都没有，因为根本没有人可以理解她。而现实中的我，虽说并不是没有朋友，但也有过属于我的孤独和忧郁，有过认为一切都很无聊的体验，想必在遇见阿虚前的春日，也有着她的忧郁。</p>
+<blockquote>
+<p>“在那之前 我一直认为自己是在某一点上有特别之处的人，和家人在一起很开心，特别是我所上的学校 我所在的班级，我一直认为那是由世界上最有趣的一群人组成的，但是那时我终于注意到并非如此，班上发生的我认为是世界上最有趣的事，也只不过是在日本各处的学校中都发生过很多遍的小事而已，从日本全国人的角度看来只不过是很普通的事而已,察觉到这一点之后 我突然觉得我周围的世界仿佛褪了色一般，不论是晚上刷牙睡觉,还是早晨起来吃早饭,一想到这是到处都有的 大家都在做的日常之事,不论什么事都会马上变得无聊起来。“自己那个有趣的日常，仅仅只是无数个普通家庭的日常。”</p>
+</blockquote>
+<p>如果是你的话，会怎么做呢？在现实中，想要改变生活谈何容易，必须放弃自己所熟悉的日常，放弃自己以往的生活方式，要将自己的想法传递给他人，要忍受孤独融入新的圈子，要争强好胜，这样所得到的，可能也只是生活的一点点改变罢了。选择妥协，选择忽视自己的感受，选择视而不见，选择接受是自己的问题，这是更加“正常“的处理方式吧。</p>
+<p>可是凉宫春日不愿接受这个沉闷的世界，想要让这个世界热闹起来。</p>
+<blockquote>
+<p>他又重说了一遍，教室的气氛终于恢复了正常。虽然这种正常是春日最讨厌的!</p>
+<p>或许，人生就是这样吧。</p>
+<p>但，老实说我内心某处真的很羡慕春日的生活态度。</p>
+<p>她总是非常渴望有朝一日能跟我早就放弃的超现实生活邂逅。而且她的做法都非常积极。</p>
+<p>光是等待，机会是不会凭空而降的，既然如此，就主动呼唤他们吧!所以，她才会在校园里画白线、在屋顶涂油漆，以及到处贴纸符。</p>
+<p>唉呀!</p>
+<p>我是不知道春日何时开始做这些会让人觉得她是某种狂热份子的怪事，因为空等待是不会有任何收获的，不如主动搞一些奇怪的仪式来召唤他们，没想到最后遗是一无所获，所以春日才会老摆出一张想要诅咒全世界的表情吧……?</p>
+<p>...</p>
+<p>「如果没有，自己组一个就好啦!」</p>
+<p>「什么啊? 」</p>
+<p>「社团啊!」</p>
+</blockquote>
+<figure data-type="image" tabindex="3"><img src="https://img.rruu.net/image/6029fbc6c45b8" alt="" loading="lazy"></figure>
+<p>老实说，我羡慕凉宫春日，她可以仅凭一人之力让生活变得有趣起来，她的生活其实是我想要的生活的模样。回想起自己的高中时光，记忆全是漫长的考试、繁杂的作业，为了考上所谓 985、211，满足由成人所制定的剧本做一个努力学习的学生，压抑自己对除了考学以外世界的向往，日复一日地做着同样的无聊的事，疲于应付不喜欢而又不得不接受的所谓同学友谊，为了成绩焦头烂额。当回想高中生活时，我总觉得缺失了什么重要的东西。我对周边世界的漠不关心，看似合理，而这才是现在的我所认为的最不合理的地方！</p>
+<figure data-type="image" tabindex="4"><img src="https://img.rruu.net/image/6029fab4aaff8" alt="" loading="lazy"></figure>
+<p>但对于这没有生气的高中生活，现在的我却也如同 1096 一样感到怀念。虽然没能像春日一样将自己的高中生活变得热闹起来，虽然和高中同学的关系大多一般，虽然最后所前往的大学也不是自己最开始想要的那所，但想起那个努力听课的自己，想起每周在书店游荡寻找《格言》、《意林》和备考时寻找《试题调研》的自己，想起默默一个人在出租屋写着做不完的假期作业的自己，想起偷偷在父母不在时看《千与千寻》的自己，那种奋力学习而又忙里偷闲的时光再也不在了，倒也无限感慨。</p>
+<p>现在的我已在大学，对于未知和冒险的向往却也越来越淡，转而变得更加实际了，不如说这就是成长吧，改变世界的想法逐渐被顺应世界的想法取代，可我还会为自己曾经的中二的大胆的想法所感动，而凉宫春日系列也逃不过所有青春校园小说的那个最终的结局吧。所谓的成长，也是离别的代名词，不过团长即便是长大了，也一定还是一如既往的想要改变生活，让世界热闹起来吧。</p>
+<figure data-type="image" tabindex="5"><img src="https://img.rruu.net/image/6029faf1e0064" alt="" loading="lazy"></figure>
+<p>听说凉宫系列的新作与前作相隔了 9 年，那么我想第一批看凉宫的人大概已经工作甚至结婚有了孩子了，虽说现在这个系列已成时代的眼泪，不过那份感动犹存。现在的我，倒有些羡慕漫无止境的八月了。夏天破旧空调里吹出的风，那未曾被雾霾掩盖的无限的蔚蓝，永远都是暑假的岁月，漫长的八月，悄然已成回忆。</p>
+<figure data-type="image" tabindex="6"><img src="https://img.rruu.net/image/6029fbc4f362e" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://img.rruu.net/image/6029fed20d0b1" alt="" loading="lazy"></figure>
+<hr>
+<p>想写的还有很多，但一时间也不知从何下手，凉宫系列给我的感动来自于即视感。总之，高中生活，哦不，所有阶段的生活，不应是一成不变，不应是毫无生趣，在短暂的时光里，如果想去做什么改变的话，不妨开始吧，说不定也可以像 SOS 团一样，真的让世界热闹起来，即便无所得，至少可以留下值得自己骄傲的回忆。</p>
+<figure data-type="image" tabindex="8"><img src="https://img.rruu.net/image/602a05d429c28" alt="" loading="lazy"></figure>
+<p>说起来谷川流也似乎找到了写作的灵感，在去年也推出了新作，不过从新作里看不出完结的影子，凉宫看来还可以陪伴我们好长时间，现在所需要的就是等待了，等待谷川流的下一本，或者等待京都新的剧场版也说不定，世界啊，你也一定可以再等等的。</p>
+<figure data-type="image" tabindex="9"><img src="https://img.rruu.net/image/602a0e1b6de1b" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://img.rruu.net/image/602a0e1b6247a" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="https://img.rruu.net/image/602a0e1b641d4" alt="" loading="lazy"></figure>
+<p><strong>God knows</strong></p>
+<iframe src="//player.bilibili.com/player.html?aid=3108239&bvid=BV1is41127yv&cid=4886757&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p><strong>SOS 团舞</strong></p>
+<iframe src="//player.bilibili.com/player.html?aid=53358431&bvid=BV1n4411L7vM&cid=93353229&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p>夏天，就要来了。</p>
+
+            </div>
+            <hr style="width: 80%;">
+            
+            <div class="sharebtnContainer">
+                <button type="button" class="sharebtn">转载分享</button>
+            </div>
+            <div class="shareContainer">
+                <div class="share" style="height:30px;background: white;">
+                    <a class="qq" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/QQ.png" alt=""></i></a>
+                    <a class="wechat" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/wechat.png" alt=""></i></a>
+                    <a class="weibo" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/weibo.png" alt=""></i></a>
+                    <a class="qzone" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/qzone.png" alt=""></i></a>
+                    <a class="douban" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/douban.png" alt=""></i></a>
+                    <a class="facebook" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/facebook.png" alt=""></i></a>
+                    <a class="twitter" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/twitter.png" alt=""></i></a>
+                </div>
+            </div>
+            
+            
+            <div class="donateContainer">
+                <img src="https://SpookerV5.github.io/media/images/donate.png" alt="" class="donateImg">
+            </div>
+            <div class="donateContainer">
+                <img src="https://i.loli.net/2021/01/22/L1q2Xzi6IjB9Jpm.png" alt="" class="donate">
+            </div>
+            
+            <div class="postfooter">
+                <ul class="post-copyright">
+                    <li><strong>文章作者：</strong>Lenger</li>
+            <li><strong>原文链接：</strong>https://SpookerV5.github.io/post/v-lesslessliang-gong-chun-ri-xi-lie-greatergreater-du-hou-za-tan/</li>
+            <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
+                许可协议。转载请注明出处！</li>
+            </ul>
+        </div>
+        <div id="otherpost">
+            
+            
+            <a data-pjax class="next-post-pc" href="https://SpookerV5.github.io/post/a-lesslessliang-gong-chun-ri-xi-lie-greatergreater-du-hou-za-tan/"  style="color: black;">
+                <div id="npcontainer">
+                    
+                    <img src="https://ae03.alicdn.com/kf/Hfb66b24c926c4c30b028ed6721d63574p.jpg" style="width: 100%;" class="opimg">
+                    
+                    <h4 class="optitle">α-《凉宫春日系列》读后杂谈</h4>
+                </div>
+            </a>
+            <div class="next-post">
+                下一篇 <a  data-pjax href="https://SpookerV5.github.io/post/a-lesslessliang-gong-chun-ri-xi-lie-greatergreater-du-hou-za-tan/">α-《凉宫春日系列》读后杂谈</a>
+            </div>
+            
+        </div>
     </div>
-    <span class="mobiledescribtion"></span>
-</div>
-
-    <div id="mobilebgurl" style="display:none">https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images</div>
-
+    </div>
+    </div>
+    <!-- 弹窗 -->
+    <div id="myModal" class="modal">
+        <img class="modal-content" id="img01">
+    </div>
+</body>
 <script>
-    var welcome = $('.welcome');
-    var bgurl = document.getElementById("mobilebgurl").innerHTML;
-    for (var i = 0; i < 3; i++)
-        bgurl = bgurl.replace("\\", "/");
-    welcome.css("background", "url('" + bgurl + "')");
-    var mobiledes = document.querySelector(".mobiledescribtion");
-    var text = "如果是你的话，一定没问题";
-    // 当前显示第几个字
-    var mobilecharIndex = 1;
-    // 每个字显示间隔默认是500毫秒
-    var mobiledelta = 500;
-
-    // 记录动画执行开始时间
-    var mobilestart = null;
-    // 是否为删除动画
-    var mobileisDeleting = false;
-
-    // 动画回调函数
-    function mobileLoadDes(time) {
-        window.requestAnimationFrame(mobileLoadDes);
-        // 初始化开始时间
-        if (!mobilestart) start = time;
-        // 获取时间间隔
-        var mobileprogress = time - mobilestart;
-        // 每隔一定的时间，打印出一个新的字符
-        if (mobileprogress > mobiledelta) {
-            // 如果是打字效果
-            if (!mobileisDeleting) {
-                // 给展示文字的span新增一个字符，使用innerHTML来替换，charIndex自增1，然后返回新的字符串子串
-                mobiledes.innerHTML = "&nbsp;" + text.slice(
-                    0,
-                    ++mobilecharIndex
-                );
-                mobiledelta = 500 - Math.random() * 400;
-            } else {
-                // 如果是删除效果，则把文字一个一个减掉
-                mobiledes.innerHTML = "&nbsp;" + text.slice(
-                    0,
-                    mobilecharIndex--
-                );
-            }
-            // 把star更新为当前时间，进行下一个周期
-            mobilestart = time;
-
-            // 如果文字已经全部打印完毕
-            if (mobilecharIndex === text.length) {
-                // 下次开始删除文字
-                mobileisDeleting = true;
-                // 删除文字的间隔为200毫秒
-                mobiledelta = 100;
-                // 额外等待1.2秒后再删除
-                mobilestart = time + 1000;
-            }
-
-            // 如果文字删除完毕
-            if (mobilecharIndex < 0) {
-                mobileisDeleting = false;
-                // 额外增加200毫秒延迟
-                mobilestart = time + 200;
-            }
-        }
-    }
-
-    window.requestAnimationFrame(mobileLoadDes);
+    //文章阅读热度
+    var pl = $("#pl").html();
+    var rootaddr = $("#rootaddr").html();
+    pl = pl.replace(rootaddr, "");
+    $("#hotnum").attr('id', pl);
 </script>
+                    <div class="toc-container">
+                        
                     </div>
-                    <div style="display:none"><style>
+                    <div class="tog">
+                        <div class="toggleContainer">
+                            <div class="toggle">
+                                <i class="fas fa-angle-double-up"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="comment" class="comment" style="background: white">
+                        <div class="commentcontainer">
+                            
+                            <style>
     @media screen and (min-width: 1300px) {
         .veditor::placeholder {
             color: #b3b3b3;
@@ -1159,137 +1305,19 @@
         });
     </script>
 
-</body></div>
-                    <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/font-awesome.css">
-<div id="post-container">
-    
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://SpookerV5.github.io/post/lesslessbei-jing-zhe-die-greatergreater-yi-ge-wei-jin-de-gu-shi/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://ae02.alicdn.com/kf/Hc6058cd485ac49dfbaf25f054a79976fI.jpg" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        《北京折叠》——一个未尽的故事
-                    </div>
-                </div>
-            </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2020-12-03</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://SpookerV5.github.io/tag/wExq6T_ib/" class="postlink">
-                    <i class="fa fa-tag"></i> 读书笔记
-                </a>
-                
-            </div>
-        </div>
-        
-</div>
-
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://SpookerV5.github.io/post/hello-gridea/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://SpookerV5.github.io/post-images/hello-gridea.png" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        Hello Gridea
-                    </div>
-                </div>
-            </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2018-12-12</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://SpookerV5.github.io/tag/d2nx1SId-/" class="postlink">
-                    <i class="fa fa-tag"></i> Gridea
-                </a>
-                
-            </div>
-        </div>
-        
-</div>
-
-</div>
-                    <div>
-                        <div class="pcpagi">
-    <div class="pagi">
-        <ul>
-            
-            <li><a data-pjax href="https://SpookerV5.github.io/" style="width:100px" id="prev">上一页</a></li>
-            
-                    <li><a id="page1">1</a></li>
-                    <li><a id="page2" class="active">2</a></li>
-                    <li><a id="page3">3</a></li>
-                    
-            <li><a style="width:100px">&nbsp;</a></li>
-            
-                </ul>
-    </div>
-</div>
-
-<div id="pagination-prev" style="display:none"> https://SpookerV5.github.io/
-</div>
-<div id="pagination-next" style="display:none"> </div>
-
-<div class="pagination-container">
-    
-    <a data-pjax href="https://SpookerV5.github.io/" class="mobile-prevpage">上一页</a>
-      
-    
-</div>
-
-<script>
-    var prevstr = document.getElementById("pagination-prev").innerHTML;
-    var nextstr = document.getElementById("pagination-next").innerHTML;
-    var page1 = document.getElementById("page1");
-    var page2 = document.getElementById("page2");
-    var page3 = document.getElementById("page3");
-    page1.innerHTML = '-';
-    page2.innerHTML = '1';
-    page3.innerHTML = '-';
-    if (prevstr.length > 5) {
-        if (prevstr.indexOf("page/") != -1) {
-            var prevnum = parseInt(prevstr.split("page/")[1]);
-            page1.innerHTML = prevnum;
-            page2.innerHTML = prevnum + 1;
-        } else {
-            page1.innerHTML = 1;
-            page2.innerHTML = 2;
-        }
-    }
-    if (nextstr.indexOf("page/") != -1) {
-        var nextnum = parseInt(nextstr.split("page/")[1]);
-        page3.innerHTML = nextnum;
-        page2.innerHTML = nextnum - 1;
-    }
-</script>
+</body>
+                            <div class="clear"></div>
+                            
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-1 col-lg-2"></div>
-                
-                 
+                <div id="bg">
                 </div>
             </div>
-            <div id="bg">
-            </div>
-            <div id="bgchoice" style="display: none">link
-            </div>
             
-            <div id="bgurl" style="display:none">https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images</div>
-             
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-        </div>
-    </div>
-    
-            <head>
+        
+        <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 </head>
 
@@ -1351,20 +1379,120 @@
         }
     }
 </script>
-            
-    <div id="domainname" style="display:none">https://SpookerV5.github.io
-        </div>
         
-        <script type="text/javascript">
-            var message_Path = '/live2d/'
-            var home_Path = document.getElementById("domainname").innerHTML + "/"; //此处修改为你的域名，必须带斜杠
-        </script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/live2d.js"></script>
-        <script type="text/javascript" src="https://SpookerV5.github.io/media/live2d/js/message.js"></script>
-        <script type="text/javascript">
-            loadlive2d("live2d", "https://SpookerV5.github.io/media/live2d/assets/tororo.model.json");
-        </script>
-        
+    </div>
+    
+    <div id="bgchoice" style="display: none">link
+    </div>
+    
+    <div id="bgurl" style="display:none">https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images</div>
+    
+</body>
+<script>
+    var img = $("img");
+    for (var i = 0; i < img.length; i++) {
+        if (img.eq(i).attr("class") == undefined) {
+            img.eq(i).attr("class", "lazyload");
+            var imgsrc = img.eq(i).attr("src");
+            img.eq(i).attr("data-original", imgsrc);
+            img.eq(i).attr("src", "");
+            img.eq(i).hide();
+        }
+    }
+
+    function refreshImg(imgclass) {
+        // 获取弹窗
+        var modal = document.getElementById('myModal');
+
+        // 获取图片插入到弹窗 - 使用 "alt" 属性作为文本部分的内容
+        var img = document.getElementsByClassName(imgclass);
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        for (var i in img) {
+            img[i].onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+
+        // 图片关闭
+        var modalImg = document.getElementById('img01');
+        // 鼠标点击模型外区域关闭登录框
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            if (menupos == 'left')
+                return true;
+            if (event.target == social) {
+                social.style.display = "none";
+            }
+        }
+    }
+
+</script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+<script>
+    //寻找所有code标签，加复制按钮鸭！(行内代码除外)
+    var codes = document.getElementsByTagName('code');
+    if (codes.length) {
+        for (var i = 0; i < codes.length; i++) {
+            //高度/行高=文本行数
+            // var rowNum=Math.round(codes[i].height()/parseFloat(codes[i].css('line-height')));
+            // console.log("当前有"+rowNum+"行");
+            var code_id = "code_id_" + i;
+            codes[i].setAttribute("id", code_id);
+            var ci = "#" + code_id;
+            var codedot = $(ci);
+            var rowNum = Math.round(codedot.height() / parseFloat(codedot.css('line-height')));
+            if (rowNum <= 1) continue;
+            var btn = document.createElement("button");
+            btn.setAttribute("class", "copybt");
+            btn.setAttribute("data-clipboard-target", "#" + code_id);
+            btn.innerHTML = '复制代码';
+            codes[i].parentNode.insertBefore(btn, codes[i]);
+        }
+    };
+    var cop = new ClipboardJS('.copybt');
+    cop.on('success', function (e) {
+        e.trigger.innerHTML = "复制成功~"
+        e.trigger.style.background = "#894e54"
+        e.clearSelection();
+    });
+    cop.on('error', function (e) {
+        e.clearSelection();
+    });
+</script>
+
+<script type="text/javascript">
+    var message_Path = '/live2d/'
+    var home_Path = document.getElementById("domainname").innerHTML + "/"; //此处修改为你的域名，必须带斜杠
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js"></script>
+<script type="text/javascript" src="https://SpookerV5.github.io/media/live2d/js/message.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "https://SpookerV5.github.io/media/live2d/assets/tororo.model.json");
+</script>
+
+<script>
+    $(function () {
+        $('.toggleContainer').click(function () {
+            $('html,body').animate({
+                scrollTop: '0px'
+            }, 800);
+        });
+        $(window).scroll(function () {
+            var st = $(window).scrollTop();
+            if (st > 30) {
+                $(".toggleContainer").fadeIn(400);
+            } else {
+                $(".toggleContainer").fadeOut(100);
+            }
+        });
+    });
+</script>
 
 <script>
     var bgchoice = $('#bgchoice').html();
@@ -1374,16 +1502,112 @@
         for (var i = 0; i < 3; i++)
             bgurl = bgurl.replace("\\", "/");
     bg.css("background", "url('" + bgurl + "')");
+</script>
 
+
+<script src="https://SpookerV5.github.io/media/js/index.js"></script>
+
+
+
+<!-- 动态更改上(下)一篇博客图片框长宽 -->
+<script>
+    npcontainer = document.querySelector('#npcontainer');
+    npstyle = window.getComputedStyle(npcontainer, null);
+    npwidth = npstyle.width;
+    npheight = 0.6 * Number(npwidth.replace("px", ""));
+    npheight = npheight.toString() + "px";
+    var op = $(".opimg");
+    op.css("height", npheight);
+</script>
+
+<script src="https://SpookerV5.github.io/media/share/dist/Share.js"></script>
+
+<script>
+    var avatarSrc = $(".avatar").attr("src");
+    var dp = document.getElementsByClassName("describtion")[0].innerHTML;
+</script>
+
+
+<script>
+    var title = document.getElementById("texttitle").getElementsByTagName("h2");
+
+    var share = new Share('.share', {
+        title: title[0].innerHTML,
+        initialized: true,
+        //默认获取网站描述
+        description: dp,
+        //网站图片默认获取的是设置的用户头像
+        image: avatarSrc,
+        //激活的分享网站
+        sites: ["weibo", "qq", "wechat", "douban", "qzone", "facebook", "twitter", "google"],
+        //微信分享PC端会生成二维码分享,移动端如果可以唤起微信最好
+        wechatQrcodeTitle: "微信扫一扫：分享", // 微信二维码提示文字
+        wechatQrcodeHelper: '<p>微信里扫一下二维码</p><p>便可将本文分享至朋友圈。</p>',
+        //关闭的网站分享
+        disabled: ['google', 'linkedin'],
+        wechatQrcodePosition: 'bottom'
+    });
+
+    //点击分享按钮展现出分享icons
+    var sharebtnTag = false;
+    $(".sharebtn").click(function () {
+        if (!sharebtnTag) {
+            $(".share").show();
+            sharebtnTag = true;
+        }
+        else {
+            $(".share").hide();
+            sharebtnTag = false;
+        }
+    })
+
+    var donatebtnTag = false;
+    $(".donateImg").click(function () {
+        if (!donatebtnTag) {
+            $(".donate").show();
+            donatebtnTag = true;
+        }
+        else {
+            $(".donate").hide();
+            donatebtnTag = false;
+        }
+    })
+
+    //加载后的事件同步（阅读量、移动端评论等
     window.onload = function () {
+        getHotnum();
+        var sharepc = $(".share").eq(0).html();
+        $(".share").eq(1).html(sharepc);
+        document.getElementById("veditor").setAttribute("placeholder", jrsc);
         aplayerbtnInit();
     }
 </script>
-<!-- 页内pjax刷新 -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.js"></script>
 
-        <script src="https://SpookerV5.github.io/media/js/index.js"></script>
-        
-</body>
-</html>
+
+<script>
+    jQuery(document).ready(function ($) {
+        function lazyload() {
+            var oLazyload = $("img.lazyload"),
+                fLazyload = function (hLazyload) {
+                    var nLazyload = $(window).height() + $(document).scrollTop();
+                    oLazyload.each(function () {
+                        $(this).offset().top < nLazyload && ($(this).trigger("appear"), oLazyload =
+                            oLazyload.not(this));
+                    }), 0 == oLazyload.length && $(window).unbind("scroll", fLazyload);
+                };
+            oLazyload.each(function () {
+                $(this).one("appear", function () {
+                    $(this).attr("src", $(this).attr("data-original"));
+                    $(this).fadeIn(500);
+                });
+            }), $(window).bind("scroll", fLazyload), fLazyload();
+        }
+        lazyload();
+        refreshImg("lazyload");
+    });
+</script>
+
+<!-- <script src="https://SpookerV5.github.io/media/js/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.13.0/dist/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.6.1/dist/av-live-query-min.js"></script> -->
+
