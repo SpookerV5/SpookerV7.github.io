@@ -37,15 +37,6 @@
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
     <!-- 数学公式 -->
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css"
-        integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"
-        integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"
-        integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous">
-        </script>
-    
     
 </head>
 <style>
@@ -132,7 +123,7 @@
         <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
                     src='https://SpookerV5.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         <div class="avatar-border">
-            <img src="https://SpookerV5.github.io/images/avatar.png?v=1615463665944" class="avatar">
+            <img src="https://SpookerV5.github.io/images/avatar.png?v=1615463957226" class="avatar">
         </div>
         <div class="sitename">Lenger的后花园</div>
         <span class="describtion" data-text='["如果是你的话，一定没问题"]'>&nbsp;</span>
@@ -483,7 +474,7 @@
         let talkindex = 0;
         get();
         function get() {
-            var t = JSON.parse('[{"author":"Lenger","img":"","text":"博客启用新主题fog，在原主题基础上引入看板娘伊斯特瓦尔，图床全部改为SM.MS，重写友人帐界面","time":"2021.1.22"},{"author":"Lenger","img":"","text":"咕咕咕，最新的博文已经写了5000字，是轻小说阅读笔记，大概农历新年前发出，咕咕咕","time":"2021.1.23"},{"author":"Lenger","img":"","text":"考虑到im.ms图床的速度不尽如人意，全面采用阿里图床","time":"2021.1.24"}]');
+            var t = JSON.parse('[{"author":"Lenger","img":"","text":"博客启用新主题fog，在原主题基础上引入看板娘伊斯特瓦尔，图床全部改为SM.MS，重写友人帐界面","time":"2021.1.22"},{"author":"Lenger","img":"","text":"咕咕咕，最新的博文已经写了5000字，是轻小说阅读笔记，大概农历新年前发出，咕咕咕","time":"2021.1.23"},{"author":"Lenger","img":"","text":"考虑到im.ms图床的速度不尽如人意，全面采用阿里图床","time":"2021.1.24"},{"author":"Lenger","img":"","text":"可恶啊啊啊啊啊啊，阿里图床把图全都删了，暂时咱也没有啥子办法了，我也不想用在线图床了，即日起所有图片都部署到Github，速度慢的话也没啥办法了。","time":"2021.3.11"}]');
             talkindex = t.length - 1;
             for (var i = 0; i <= t.length - 1; i++) {
                 var d = {};
@@ -515,7 +506,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1615463665944">\
+                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1615463957226">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -528,7 +519,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1615463665944">\
+                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1615463957226">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -1040,7 +1031,7 @@
                         <!-- 移动端欢迎页 -->
 <div class="welcome">
     <div class="avatar-border">
-        <img src="https://SpookerV5.github.io/images/avatar.png?v=1615463665944" class="avatar">
+        <img src="https://SpookerV5.github.io/images/avatar.png?v=1615463957226" class="avatar">
     </div>
     <span class="mobiledescribtion"></span>
 </div>
