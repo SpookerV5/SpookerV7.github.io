@@ -297,7 +297,7 @@ For example:
         <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
                     src='https://SpookerV5.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         <div class="avatar-border">
-            <img src="https://SpookerV5.github.io/images/avatar.png?v=1615463957226" class="avatar">
+            <img src="https://SpookerV5.github.io/images/avatar.png?v=1615464166046" class="avatar">
         </div>
         <div class="sitename">Lenger的后花园</div>
         <span class="describtion" data-text='["如果是你的话，一定没问题"]'>&nbsp;</span>
@@ -648,7 +648,7 @@ For example:
         let talkindex = 0;
         get();
         function get() {
-            var t = JSON.parse('[{"author":"Lenger","img":"","text":"博客启用新主题fog，在原主题基础上引入看板娘伊斯特瓦尔，图床全部改为SM.MS，重写友人帐界面","time":"2021.1.22"},{"author":"Lenger","img":"","text":"咕咕咕，最新的博文已经写了5000字，是轻小说阅读笔记，大概农历新年前发出，咕咕咕","time":"2021.1.23"},{"author":"Lenger","img":"","text":"考虑到im.ms图床的速度不尽如人意，全面采用阿里图床","time":"2021.1.24"},{"author":"Lenger","img":"","text":"可恶啊啊啊啊啊啊，阿里图床把图全都删了，暂时咱也没有啥子办法了，我也不想用在线图床了，即日起所有图片都部署到Github，速度慢的话也没啥办法了。","time":"2021.3.11"}]');
+            var t = JSON.parse('[{"author":"Lenger","img":"","text":"博客启用新主题fog，在原主题基础上引入看板娘伊斯特瓦尔，图床全部改为SM.MS，重写友人帐界面","time":"2021.1.22"},{"author":"Lenger","img":"","text":"咕咕咕，最新的博文已经写了5000字，是轻小说阅读笔记，大概农历新年前发出，咕咕咕","time":"2021.1.23"},{"author":"Lenger","img":"","text":"考虑到im.ms图床的速度不尽如人意，全面采用阿里图床","time":"2021.1.24"},{"author":"Lenger","img":"","text":"可恶啊啊啊啊啊啊，阿里图床把图全都删了，暂时咱也没有啥子办法了，我也不想用在线图床了，即日起所有图片都部署到 Github，速度慢的话也没啥办法了，丢失的图片先用随机二次元图片代替了，不过 Github 貌似单个库大小限制 1G，容量不够的话到时候再说吧，哼！","time":"2021.3.11"}]');
             talkindex = t.length - 1;
             for (var i = 0; i <= t.length - 1; i++) {
                 var d = {};
@@ -680,7 +680,7 @@ For example:
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1615463957226">\
+                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1615464166046">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -693,7 +693,7 @@ For example:
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1615463957226">\
+                        <img class="intro1" src="https://SpookerV5.github.io/images/avatar.png?v=1615464166046">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
