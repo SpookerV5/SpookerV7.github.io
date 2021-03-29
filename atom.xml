@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SpookerV5.github.io</id>
     <title>Lenger的后花园</title>
-    <updated>2021-03-28T03:28:13.467Z</updated>
+    <updated>2021-03-29T08:06:41.259Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SpookerV5.github.io"/>
     <link rel="self" href="https://SpookerV5.github.io/atom.xml"/>
@@ -10,6 +10,53 @@
     <logo>https://SpookerV5.github.io/images/avatar.png</logo>
     <icon>https://SpookerV5.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Lenger的后花园</rights>
+    <entry>
+        <title type="html"><![CDATA[计算机二级 Office 杂项整理]]></title>
+        <id>https://SpookerV5.github.io/post/ji-suan-ji-er-ji-office-za-xiang-zheng-li/</id>
+        <link href="https://SpookerV5.github.io/post/ji-suan-ji-er-ji-office-za-xiang-zheng-li/">
+        </link>
+        <updated>2021-03-29T08:03:44.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="word">Word</h2>
+<h3 id="域代码">域代码</h3>
+<p>Shift + F9  编辑选中的域代码</p>
+<p>Ctrl + F9 插入域</p>
+<h3 id="重复上步操作">重复上步操作</h3>
+<p>F4</p>
+<h3 id="引用分隔符如何删">引用分隔符如何删</h3>
+<p>视图&gt;&gt;草稿视图&gt;&gt;引用&gt;&gt;显示备注&gt;&gt;尾注分隔符</p>
+<h3 id="邮件编辑域代码">邮件编辑域代码</h3>
+<p>Shift + F9</p>
+<p>#0.00      在域代码后加，意思是保留两位小数</p>
+<h2 id="excel">Excel</h2>
+<h3 id="连续选择">连续选择</h3>
+<p>Ctrl + Shift + 方向键</p>
+<h3 id="单元格格式后加星期">单元格格式后加星期</h3>
+<p>在自定义后加 aaaa</p>
+<h3 id="日期中的月份和天数都用两位数显示">日期中的月份和天数都用两位数显示</h3>
+<p>将 yyyy/m/d 写为 yyyy/mm/dd</p>
+<h3 id="在单元格内换行">在单元格内换行</h3>
+<p>Alt + Enter</p>
+<h3 id="修改单元格格式满足条件">修改单元格格式满足条件</h3>
+<p>[&lt;15]干旱      意思是数值小于15会显示干旱</p>
+<p>[=0]-;[&gt;0]0%  意思是数值为0的单元格显示 “－”，大于 ０ 的单元格显示保留 0 位小数的百分比</p>
+<p>定位</p>
+<p>F5 或 Ctrl + G</p>
+<p>输入值 Ctrl + Enter</p>
+<h3 id="数据透视表向导">数据透视表向导</h3>
+<p>Alt + D +  P</p>
+<h3 id="设置单元格格式自定义时间超过-24-小时">设置单元格格式自定义时间超过 24 小时</h3>
+<p>[hh]&quot;时&quot;mm&quot;分&quot;;@</p>
+<p>加上 []</p>
+<h3 id="数据区域绝对引用">数据区域绝对引用</h3>
+<p>F4</p>
+<h3 id="数组求和">数组求和</h3>
+<p>Ctrl + Shift +Enter</p>
+<h2 id="ppt">PPT</h2>
+<p>25 px=1 cm</p>
+<h3 id="演讲者视图">演讲者视图</h3>
+<p>Alt + Shift + F5</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[《富爸爸穷爸爸》摘要]]></title>
         <id>https://SpookerV5.github.io/post/lesslessqiong-ba-ba-fu-ba-ba-greatergreater-zhai-yao/</id>
@@ -425,41 +472,6 @@ style="width:700px;height:480px">
 <p>在小说中，最令人印象深刻的，便是那奇幻的折叠城市，人们被根据阶级安排在三个迥然不同的空间，而老刀，在空间中穿梭，在创意上，这是绝妙的点子，符合了科幻小说的定义。而这部小说，绝不是我们通常意义上的科幻小说。<br>
 作者虽然只字未提自己的感想，但在各种各样的矛盾中，对社会的思考已然显现，并让人沉思。在小说中最大的矛盾便是这三个空间，三个空间的人并无交集，自然对其他空间知之甚少，而不知道上层对城市的规划与下层人民生活条件的恶劣，而这正与现实相应。第二个矛盾便是依言与秦天的爱情，那是在错误与偶然中诞生的爱情，之所以说故事的未尽，便来自于此，作者并未将之后的事情写出，而这极有可能是折叠城市覆灭的导火索。而老刀对钱的需求和心的变化也是小说的矛盾点，老刀是为了钱冒险在空间中穿梭，他的心在经历了空间穿梭后已然变化，从最初的麻木到富有人情味，而这是在了解城市真相后产生的，必然极其珍贵。<br>
 而最宝贵的，是老刀在文末对阿贝和阑阑的帮助，可能这才是作者最想传达给我们的吧，即便是在最冷漠的空间，最没有光芒的空间，也要坚持对美好的追求，这便是一个未尽的故事里的真正的未尽，透露出，人性。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://SpookerV5.github.io/post/hello-gridea/</id>
-        <link href="https://SpookerV5.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<p>首先感谢<a href="https://github.com/getgridea/gridea">Gridea项目</a>，如果没有它，我大概也会用Hexo或Hugo的吧（x</p>
-<p><s>然后感谢主题<a href="https://github.com/name-cq/gridea-theme-lin">凛</a>，为我节省了许多时间装扮博客。</s><br>
-已更换主题fog</p>
-<p>最后感谢<a href="https://valine.js.org/">Valine项目</a>和<a href="https://github.com/zhaojun1998/Valine-Admin">Valine-Admin</a> ，博客的评论系统和评论通知也完备啦！</p>
-<p>以下是Gridea自己的介绍内容：</p>
-<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>
