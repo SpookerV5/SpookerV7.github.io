@@ -1,21 +1,199 @@
-<!DOCTYPE html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-<link rel="stylesheet" href="https://SpookerV5.github.io/media/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
-<link rel="stylesheet" href="https://SpookerV5.github.io/styles/main.css">
-<link rel="stylesheet" href="https://SpookerV5.github.io/media/css/font-awesome.css">
-<title>Lenger的后花园</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="description" content="Little Busters ! 伴剧随想
+怎么说呢，为了来一种全新的体验，决定用看几集番然后写随想的方式来达到有仪式感的记录效果，所以就有了这篇文章，Little Busters ! 是我一直想补的 Key 社的番，虽然不是由京都动画制作..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://SpookerV5.github.io/styles/main.css">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <!-- 数学公式 -->
+    
+    <title>Lenger的后花园</title>
+    
+    <style>
+        .markdownIt-TOC {
+            margin-left: 28%;
+            padding-left: 2px;
+            width: 80%;
+        }
 
+        .markdownIt-TOC li {
+            padding-left: 8%;
+        }
+    </style>
+    
+</head>
 
 <body>
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+    <div id="domainname" style="display:none">https://SpookerV5.github.io</div>
     <!-- 响应式布局，针对PC端内容显示 -->
     <div id="content">
-        <div class="nav-large">
+        <div>
+            <div id="bar">
+                <head>
+  <!-- 引入Bootstrap核心样式文件 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/bootstrap.min.css">
+</head>
+<style>
+  .navmobile {
+    z-index: 15;
+    max-height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .navbar {
+      max-width: 100vw;
+    }
+  }
+
+  @media screen and (max-width:1200px) and (min-width: 768px) {
+    @media (min-width: 768px) {
+      .navbar-nav {
+        float: right;
+        margin: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .mbapspan {
+      padding: 0;
+    }
+  }
+</style>
+<div class="pjaxloading"  onclick="pjaxloadingClose()">
+  <div class="loadingbackground"></div>
+  <div id="loading">
+    <div class="loading">
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
+        aria-expanded="false" id="barbutton">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a data-pjax class="navbar-brand" href="https://SpookerV5.github.io">Lenger的后花园&nbsp;&nbsp;|</a>
+      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
+          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="barmenu">
+      <ul class="nav navbar-nav">
+        
+        
+        <li>
+          <a data-pjax href="/">
+            首页
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/archives">
+            归档
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/tags">
+            标签
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="https://SpookerV5.github.io/post/liu-yan">
+            留言
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/post/about">
+            关于
+          </a>
+        </li>
+        
+        
+        
+        <li><a href="https://spookerv5.github.io/atom" target="_blank">
+            RSS
+          </a></li>
+        
+        
+        
+        <li><a data-pjax href="https://SpookerV5.github.io/talk">说说</a></li>
+        
+          
+        <li><a data-pjax href="https://SpookerV5.github.io/friends">友链</a></li>
+
+        
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!-- 引入jQuery核心js文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script>
+    let btstate = false;
+    var bt = $("#barbutton");
+    var bm = $("#barmenu");
+    bt.click(function () {
+      dropdown();
+    })
+    function dropdown() {
+      console.log(btstate);
+      //下拉
+      if (btstate == false) {
+        bt.removeClass("collapsed");
+        bt.attr("aria-expanded", "true");
+        bm.attr("aria-expanded", "true")
+        bm.fadeIn(700);
+        btstate = true;
+      }
+      else {
+        bt.addClass("collapsed");
+        bt.attr("aria-expanded", "false");
+        bm.removeClass("in");
+        bm.hide();
+        bm.attr("aria-expanded", "false");
+        btstate = false;
+      }
+    }
+  </script> 
+            </div>
             <div class="row">
-                
                 <div class="side"><head>
     <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://SpookerV5.github.io/styles/main.css">
@@ -875,6 +1053,7 @@
         }
     </script>
     </div>
+                
                 <div id="tab1" class="tab">
                     <div class="bars">
                         <span></span>
@@ -883,279 +1062,281 @@
                     </div>
                     <div class="close"></div>
                 </div>
-                <div class="col-lg-3"></div>
-                <div class="mobilebar"><head>
-  <!-- 引入Bootstrap核心样式文件 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/bootstrap.min.css">
-</head>
-<style>
-  .navmobile {
-    z-index: 15;
-    max-height: 40vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
+                <div class="col-md-1 col-lg-3"></div>
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+                    <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/font-awesome.css">
 
-  @media screen and (max-width: 1200px) {
-    .navbar {
-      max-width: 100vw;
-    }
-  }
-
-  @media screen and (max-width:1200px) and (min-width: 768px) {
-    @media (min-width: 768px) {
-      .navbar-nav {
-        float: right;
-        margin: 0;
-      }
-    }
-  }
-
-  @media screen and (max-width:768px) {
-    .mbapspan {
-      padding: 0;
-    }
-  }
-</style>
-<div class="pjaxloading"  onclick="pjaxloadingClose()">
-  <div class="loadingbackground"></div>
-  <div id="loading">
-    <div class="loading">
-    </div>
-  </div>
-</div>
-<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
-        aria-expanded="false" id="barbutton">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a data-pjax class="navbar-brand" href="https://SpookerV5.github.io">Lenger的后花园&nbsp;&nbsp;|</a>
-      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
-          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="barmenu">
-      <ul class="nav navbar-nav">
-        
-        
-        <li>
-          <a data-pjax href="/">
-            首页
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/archives">
-            归档
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/tags">
-            标签
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="https://SpookerV5.github.io/post/liu-yan">
-            留言
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/post/about">
-            关于
-          </a>
-        </li>
-        
-        
-        
-        <li><a href="https://spookerv5.github.io/atom" target="_blank">
-            RSS
-          </a></li>
-        
-        
-        
-        <li><a data-pjax href="https://SpookerV5.github.io/talk">说说</a></li>
-        
-          
-        <li><a data-pjax href="https://SpookerV5.github.io/friends">友链</a></li>
-
-        
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-
-  <!-- 引入jQuery核心js文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-  <script>
-    let btstate = false;
-    var bt = $("#barbutton");
-    var bm = $("#barmenu");
-    bt.click(function () {
-      dropdown();
-    })
-    function dropdown() {
-      console.log(btstate);
-      //下拉
-      if (btstate == false) {
-        bt.removeClass("collapsed");
-        bt.attr("aria-expanded", "true");
-        bm.attr("aria-expanded", "true")
-        bm.fadeIn(700);
-        btstate = true;
-      }
-      else {
-        bt.addClass("collapsed");
-        bt.attr("aria-expanded", "false");
-        bm.removeClass("in");
-        bm.hide();
-        bm.attr("aria-expanded", "false");
-        btstate = false;
-      }
-    }
-  </script> </div>
-                    <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
-                        <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/font-awesome.css">
-<div class="tag-container">
-    
-    <div class="postshow">
-        
-        <a data-pjax href="https://SpookerV5.github.io/post/v-lesslessliang-gong-chun-ri-xi-lie-greatergreater-du-hou-za-tan/">
-            <div id="post" style="width:100%">
-                <img src="https://api.yimian.xyz/img?type=moe&amp;size=1920x1080" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        β-《凉宫春日系列》读后杂谈
-                    </div>
-                </div>
+<body>
+    <div class="allcontent" id="postdetail">
+        <div class="postshow postpadding" style="padding-bottom: 0;">
+            
+            <div class="postdetailimg">
+                <img src="https://SpookerV5.github.io/post-images/little-busters-ban-ju-sui-xiang.png" class="postimage" style="cursor:auto">
             </div>
-            <div class="postinfo">
-                <div class="postdate"><i class="fa fa-calendar"></i>2021-02-15</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 9 min read</div>
+            <div class="postinfo-detail">
+                <div class="postdate"><i class="fa fa-calendar"></i>2021-03-31</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 11 min read</div>
                 <div class="posttag">
                     
-                    <a data-pjax href="https://SpookerV5.github.io/tag/IOF_helPM/" class="postlink">
-                        <i class="fa fa-tag"></i> 闲言碎语
-                    </a>
-                    
-                    <a data-pjax href="https://SpookerV5.github.io/tag/XNEvl-ixD/" class="postlink">
-                        <i class="fa fa-tag"></i> 轻小说补完计划
-                    </a>
-                    
                 </div>
             </div>
-        </a>
-        
-</div>
+            
+        <div id="articlecontent">
+            <div id="texttitle" style="text-align: center">
+                <h2 id="ptitle">Little Busters ! 伴剧随想</h2>
+                <!-- id 将作为查询条件 -->
+                <div id="pl" style="display:none">https://SpookerV5.github.io/post/little-busters-ban-ju-sui-xiang/</div>
+                <div id="rootaddr" style="display:none">https://SpookerV5.github.io</div>
+                <span id="hotnum">
+                    <h4><i class="fa fa-eye" aria-hidden="true" style="color: #FF8C00;"></i>&nbsp;&nbsp;热度</i>: <i
+                            class="hotnum">loading...</i></h4>
+                </span>
+            </div>
+            <div class="text ">
+                <h1 id="little-busters-伴剧随想">Little Busters ! 伴剧随想</h1>
+<p>怎么说呢，为了来一种全新的体验，决定用看几集番然后写随想的方式来达到有仪式感的记录效果，所以就有了这篇文章，Little Busters ! 是我一直想补的 Key 社的番，虽然不是由京都动画制作，不过质量看来还是非常高的，那么，一起开始发现世界的秘密吧！</p>
+<p>以下内容存有剧透，而且主观思想非常强！因为完全是自己刚看完的第一感受</p>
+<blockquote>
+<p>在虚构的故事当中寻求真实感的人脑袋一定有问题。																		 —— 阿虚</p>
+</blockquote>
+<p>这句话是给自己说的，这个年纪的我看番有些较真，大概也是快到了追剧而非追番的年纪了（大雾</p>
+<hr>
+<p><a href="https://www.bilibili.com/bangumi/media/md3242/">Little Busters!</a></p>
+<p>1-6 话</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=26089122&auto=0&height=66"></iframe>
+<p>连肝6集的我表示刚上来神北小毬线就给了我一刀啊，虽然还是套路满满的 校园+社团+沙雕日常，还有 失忆+绘本+医院+话疗，不过我还是被深深的治愈了啊，现在连听 op 都觉得很虐，果然是中京大学心理系毕业的大魔王，在玩弄心理概念时毫不手软呢！</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/03/31/CfoqruIbkAtymJ4.jpg" alt="拼接截图 _3_.jpg" loading="lazy"></figure>
+<p>话说这个番的声优很有意思，理树是ho酱配的，小毬的配音好像是 ef 里的女主，目前来看啊真的是回忆满满，很像 cl，ab 的人设真的是非常值得怀念，不过ab好像就是麻子从这个里来的灵感吧，期待后面的更多故事啦！</p>
+<p>7-9 话</p>
+<p>呼，6 话后高光又回来啦，这几话出来的人物实在是太多啦， 库特、西园、三枝叶留佳、二木佳奈多，日常的节奏不紧不慢，而关于世界的秘密的第二封信来到，预言了拯救食堂的行动，似乎世界的真相呼之欲出，猫、信、嗜睡症，不过欢乐的日常下，隐藏的到底是什么呢？</p>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/03/31/QOGuA6iKI5sYNbd.png" alt="屏幕截图_92_.png" loading="lazy"></figure>
+<p><s>莫名像团长</s></p>
+<p>10 话</p>
+<p>西园美鱼的故事，无口的少女，似乎是隐藏着什么，书中的诗很在意，大概是有深意。</p>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2021/03/31/XmnKYgQih56M3pW.png" alt="屏幕截图_93_.png" loading="lazy"></figure>
+<p>啊这2333</p>
+<p>11 话</p>
+<p>试胆大会篇，全程高能，这个爆笑程度大概和我当初看ab OVA1 的感觉一样了</p>
+<p>12-14 话</p>
+<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2021/03/31/nxECYgvpsK85k3z.jpg" alt="拼接截图 _4_.jpg" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2021/03/31/oahq3kHPGCvYbwf.jpg" alt="拼接截图 _5_.jpg" loading="lazy"></figure>
+<p>美鱼线，对于多重人格的话，在不吉波普系列里已然了解，但 key 的感动实在难以忘怀，此刻已是凌晨 1:03，虽然这几话似曾相识，记忆与愿望果然是永恒的主题，由诗篇所找回的记忆和悠长的思念，不过这应该不是世界之谜，令人在意，结尾歌声响起，顿感幸福！</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=26089139&auto=0&height=66"></iframe>
+<p>15 话</p>
+<p>类似 10 话的日常回，杀必死加理树女装哦哈哈哈哈</p>
+<p>16-18 话</p>
+<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2021/03/31/pF9HTmwf6yLNEn7.png" alt="屏幕截图_102_.png" loading="lazy"></figure>
+<p>扎心嘞，不过这个感觉很像新房啊</p>
+<figure data-type="image" tabindex="7"><img src="https://i.loli.net/2021/03/31/pOxj8FQ7tGcm4f2.png" alt="屏幕截图_103_.png" loading="lazy"></figure>
+<p>大家最好了！</p>
+<figure data-type="image" tabindex="8"><img src="https://i.loli.net/2021/03/31/kn3KVjQpvOyJa1i.png" alt="屏幕截图_104_.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://i.loli.net/2021/03/31/w6PTlnhoJzDLAeG.png" alt="屏幕截图_105_.png" loading="lazy"></figure>
+<p>这里佳奈多的表情真的是很细节了！</p>
+<p>三枝叶留佳与二木佳奈多的线，虽然对这种封建家族的展开无法引起共鸣，而且套路满满的内容，但是看见姐姐和妹妹的故事后眼泪也是呼之欲出，不过展开的其实稍微有点快了，导致家族关系也是云里雾里，甚至有点遗憾，之后的生活会是如何。</p>
+<p>EX 7-8 话</p>
+<p>决定把遗憾解除，于是蹲评论区说去看看 EX 的 7-8 话，不开弹幕，果然最后是个很温馨的结局，虽然似乎还是有点担心姐妹之后还会被二木家的人找上，不过有 Little Busters 的伙伴在，我觉得一定没问题！对了对了阿酱学姐真的是太好啦！</p>
+<p>19-20 话</p>
+<figure data-type="image" tabindex="10"><img src="https://i.niupic.com/images/2021/03/31/9g6C.jpg" alt="" loading="lazy"></figure>
+<p>这就是学霸啊！</p>
+<p>19话是库特的介绍话感觉，库特真的是太可爱啦！日式英语自带可爱的感觉！20话又是猫送来的信，解决单相思的任务，铃真的是天使一般的人。</p>
+<p>21-23 话</p>
+<figure data-type="image" tabindex="11"><img src="https://i.loli.net/2021/03/31/dm564Xf18EwusJa.png" alt="屏幕截图_120_.png" loading="lazy"></figure>
+<p>库特线，可以说是非常宏大了，不足是进展有点快了，不过世界的秘密恐怕已经藏不住了吧，一次又一次的轮回才使时间得以前进，即视感、记忆，库特和恭介似乎是知道什么的样子。</p>
+<p>24 话</p>
+<p>果然关于世界的秘密的信又到来了，这次是人偶剧，那个小矮人的故事也太像ab了吧，麻子果然是从这里得到的灵感，结尾差点害怕小毬不见了，还好虚惊一场。</p>
+<figure data-type="image" tabindex="12"><img src="https://i.loli.net/2021/03/31/MoFEwY8sNDHvXkt.png" alt="屏幕截图_121_.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="13"><img src="https://i.loli.net/2021/03/31/RuGzQHlTsLkpSAK.png" alt="屏幕截图_122_.png" loading="lazy"></figure>
+<p>小毬天使！</p>
+<p>25-26话</p>
+<p>谦吾的故事，为了拯救他人而放弃，找回自我的故事，不过这个自我嘛，好像有点和我想的不太一样哈哈。</p>
+<p>这是来自Key的故事，这是奇迹与希望的故事，这是个有来自世界的恶意的故事，平凡的日常下，隐藏着什么样的秘密呢？第一季，结束。</p>
+<p><a href="https://www.bilibili.com/bangumi/media/md81292/">Little Busters! ～Refrain～</a></p>
+<p>1-3 话</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=26089119&auto=0&height=66"></iframe>
+<p>世界果然还是出现了问题，来谷线，像是漫无止境的八月，梦醒时分，不过6月20日后到底会发生什么呢？世界的秘密难道是毁灭吗？伏笔已经多的不能再多了。大姐头的琴弹得真是好听！</p>
+<p>4 话</p>
+<p>刚看完的感觉，铃和理树好甜！但是剧情看来的确向小毬的七个小矮人的故事发展了，除了最开始的5个人外的所有人似乎在消失，莫名感到了不安。</p>
+<p>5-7 话</p>
+<p>恭介化身大魔王了吗？一下子有了反派的即视感，活着，就意味着失去，我感觉这个世界恐怕已经崩溃了。</p>
+<p>8-9 话</p>
+<figure data-type="image" tabindex="14"><img src="https://i.loli.net/2021/03/31/BhNw72e1ScaD6Pp.png" alt="屏幕截图_123_.png" loading="lazy"></figure>
+<p>世界重置，老套路了，不过看到真人和谦吾的救赎时还是非常感动，但还有4话，总觉得一切还没有结束。终于，理树不再依靠恭介的力量了，不过恭介好像坏掉了。</p>
+<p>10 话</p>
+<figure data-type="image" tabindex="15"><img src="https://i.loli.net/2021/03/31/8KzF6s4cG7MX5xu.png" alt="屏幕截图_124_.png" loading="lazy"></figure>
+<p>世界的秘密已然解开，在这美好的日常下隐藏的其实是残酷的事实，恭介连接了两个世界，为理树和铃的成长奉献了自己，这一话更加像总集篇，JC的动画制作水平值得肯定，一切的终结，已经要迫近了，眼泪已经收不回了。</p>
+<p>11-13 话</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=27867906&auto=0&height=66"></iframe>
+<p>这是个充满恶意的世界，但这也是个充满奇迹的世界。</p>
+<p>在angelbeats中的遗憾终于被little busters所解除，虽然结尾的大反转细细思考了的确不太合理，但我在感情上也是希望little busters的所有人都能够好好活下去啊！</p>
+<p>正在飞速前往 EX 篇</p>
+<p><a href="https://www.bilibili.com/bangumi/media/md3571/">Little Busters! EX</a></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28239701&auto=0&height=66"></iframe>
+<p>1-4 话</p>
+<p>沙耶线，麻老师亲笔写成，个人非常喜欢，麻子写的纯纯的恋爱，而且是 HE，沙耶也是 ab 中百合的原形，可见麻子可能自己也比较喜欢这种战斗少女的人设吧。EX 篇的 op 很好听！ed 有点新房的味道。GM 这绝对是恭介啦哈哈，恭介也是老好人了啊！同时 ab 中我的很多疑惑也都揭开了，现在看来，ab 完全可以成为lb的平行世界哈哈</p>
+<p>5-6 话</p>
+<p>佐佐美线，说明在这个世界观下，GM 甚至可以是一只猫！太短了哈哈，比起感动更多是想笑啊哈哈。</p>
+<p>7-8 话已一周目看过</p>
+<p><a href="https://www.agefans.net/play/20190023">库特 wafter</a></p>
+<p>讲库特与理树的线，库特可爱的犯规！</p>
+<hr>
+<p>至此结束了，用时一周，也算是第一次尝试用伴剧随想的方式记录自己看番的历程，所以前面似乎都在讲废话，下面可能也是（悲</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=26089121&auto=0&height=66"></iframe>
+<p>这部番的确是原汁原味的 Key 社逻辑，剧情上也是每个人的线的集合最后主线回收的传统套路，带来的也是不变的感动，在 Key 社的番里大概是没有反派的，而且总是以温馨的结局了却最后的遗憾，可以说是全程高能。这种看番的感受很像第一次看 Charlotte 时的样子，似乎 Key 与京都不再合作后的番节奏都明显变快了，不知道这到底是好事还是坏事，对于感情的描绘 JC 表现的确实不如京都，不过关于日常的处理我觉得已经非常好了！lb 中纯粹的友谊，也是让人羡慕无比啊。</p>
+<p>忽然想聊聊麻子，开始瞎谈了（逃，麻子最近也是因为《成神之日》翻车了，估计也是自闭<s>打麻将</s>中吧，不过如此看来在 ab 中 lb 的影子实在太多了，看完后忽然很理解麻子，他孤傲的个性使他无法接受自己的作品饱受非议，所以从 ab 到 Charlotte 到成神之日，麻子总想整些新花样出来以向观众“复仇”，不过这三部作品却都有些问题。麻子以 Galgame 脚本的方式来写动画剧本本身就有些困难，所以作品的质量和导演的关系非常大，而和浅井导演合作的番问题就更大了，作为把成神之日追完的我表示成神的套路其实和 lb、Charlotte 甚至更以前的 cl 都挺像的，不过麻子的脚本问题也是大得很，毕竟一味责怪演出也是不合理的，况且关于浅井，他的黑历史多了去了，无需多言，还是看看麻子自己的问题。在《成神之日》中麻子最大的问题就是没想过这只是 12 话的番，当然 ab、Charlotte 他估计也没想过，但这一次，麻子的问题严重多了，只有 2 话却想要在 12 话中塞很多东西，更可怕的是麻子把主线竟然极限压缩到了最后5话！很多事情都没有讲清楚就让雏直接 gg，而且故事的背景也太过于宏大，量子计算机，人类道德，这些其实不是麻子所擅长的范畴，不看最后 5 话，成神绝对是很好的日常番，而且青梅话也是非常感人的。再看看 lb，整个正片有 39 话，我还会觉得节奏太快， lb 本篇每个人的线都有至少2到3话做铺垫，而成神 1 话 1 个人，完全没法讲key所想要的人之间的羁绊，只有可能走像 ab，Charlotte 的传统的校园题材，而且处理不好后期也是会让节奏失控，麻子也算是玩脱了，选择最难控制的人工智能的立意，很难让人引起共鸣。不过麻子估计过几个月状态好起来又会来复仇的吧，毕竟他可不是容易被打败的人，不过不知道麻子的心脏如何，希望他笔下的奇迹也能在他的身上发生。</p>
+<p>看完 lb 后发现 ab 中的很多疑问也是得到了解答，首先 ab 的世界就可以理解为lb世界的进化版，在ab中完成心愿后会消失，音无在 ab 最后相当于成为了 GM，ab 可能也是轮回世界。</p>
+<figure data-type="image" tabindex="16"><img src="https://i.niupic.com/images/2021/03/31/9g6E.jpg" alt="" loading="lazy"></figure>
+<p>这是个带有恶意的世界</p>
+<p>这也是拥有希望和奇迹的世界</p>
+<p>大概这就是 Key 所想表达的世界</p>
+<figure data-type="image" tabindex="17"><img src="https://i.niupic.com/images/2021/03/31/9g6H.png" alt="" loading="lazy"></figure>
+<p>Little Busters! 赛高！</p>
 
-    <div class="postshow">
-        
-        <a data-pjax href="https://SpookerV5.github.io/post/a-lesslessliang-gong-chun-ri-xi-lie-greatergreater-du-hou-za-tan/">
-            <div id="post" style="width:100%">
-                <img src="https://api.yimian.xyz/img?type=moe&amp;size=1920x1080" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        α-《凉宫春日系列》读后杂谈
-                    </div>
+            </div>
+            <hr style="width: 80%;">
+            
+            <div class="sharebtnContainer">
+                <button type="button" class="sharebtn">转载分享</button>
+            </div>
+            <div class="shareContainer">
+                <div class="share" style="height:30px;background: white;">
+                    <a class="qq" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/QQ.png" alt=""></i></a>
+                    <a class="wechat" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/wechat.png" alt=""></i></a>
+                    <a class="weibo" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/weibo.png" alt=""></i></a>
+                    <a class="qzone" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/qzone.png" alt=""></i></a>
+                    <a class="douban" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/douban.png" alt=""></i></a>
+                    <a class="facebook" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/facebook.png" alt=""></i></a>
+                    <a class="twitter" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/twitter.png" alt=""></i></a>
                 </div>
             </div>
-            <div class="postinfo">
-                <div class="postdate"><i class="fa fa-calendar"></i>2021-02-11</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 19 min read</div>
-                <div class="posttag">
-                    
-                    <a data-pjax href="https://SpookerV5.github.io/tag/XNEvl-ixD/" class="postlink">
-                        <i class="fa fa-tag"></i> 轻小说补完计划
-                    </a>
-                    
-                    <a data-pjax href="https://SpookerV5.github.io/tag/wExq6T_ib/" class="postlink">
-                        <i class="fa fa-tag"></i> 读书笔记
-                    </a>
-                    
-                </div>
+            
+            
+            <div class="donateContainer">
+                <img src="https://SpookerV5.github.io/media/images/donate.png" alt="" class="donateImg">
             </div>
-        </a>
-        
-</div>
-
-</div>
-                        <div>
-                            <div class="pcpagi">
-    <div class="pagi">
-        <ul>
+            <div class="donateContainer">
+                <img src="https://i.loli.net/2021/01/22/L1q2Xzi6IjB9Jpm.png" alt="" class="donate">
+            </div>
             
-            <li><a style="width:100px">&nbsp;</a></li>
+            <div class="postfooter">
+                <ul class="post-copyright">
+                    <li><strong>文章作者：</strong>Lenger</li>
+            <li><strong>原文链接：</strong>https://SpookerV5.github.io/post/little-busters-ban-ju-sui-xiang/</li>
+            <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
+                许可协议。转载请注明出处！</li>
+            </ul>
+        </div>
+        <div id="otherpost">
             
-                    <li><a id="page1">1</a></li>
-                    <li><a id="page2" class="active">2</a></li>
-                    <li><a id="page3">3</a></li>
+            
+            <a data-pjax class="next-post-pc" href="https://SpookerV5.github.io/post/ji-suan-ji-er-ji-office-za-xiang-zheng-li/"  style="color: black;">
+                <div id="npcontainer">
                     
-            <li><a style="width:100px">&nbsp;</a></li>
+                    <img src="https://SpookerV5.github.io/post-images/ji-suan-ji-er-ji-office-za-xiang-zheng-li.jpg" style="width: 100%;" class="opimg">
+                    
+                    <h4 class="optitle">计算机二级 Office 杂项整理</h4>
+                </div>
+            </a>
+            <div class="next-post">
+                下一篇 <a  data-pjax href="https://SpookerV5.github.io/post/ji-suan-ji-er-ji-office-za-xiang-zheng-li/">计算机二级 Office 杂项整理</a>
+            </div>
             
-                </ul>
+        </div>
     </div>
-</div>
-
-<div id="pagination-prev" style="display:none"> 
-</div>
-<div id="pagination-next" style="display:none"> </div>
-
-<div class="pagination-container">
-      
-    
-</div>
-
+    </div>
+    </div>
+    <!-- 弹窗 -->
+    <div id="myModal" class="modal">
+        <img class="modal-content" id="img01">
+    </div>
+</body>
 <script>
-    var prevstr = document.getElementById("pagination-prev").innerHTML;
-    var nextstr = document.getElementById("pagination-next").innerHTML;
-    var page1 = document.getElementById("page1");
-    var page2 = document.getElementById("page2");
-    var page3 = document.getElementById("page3");
-    page1.innerHTML = '-';
-    page2.innerHTML = '1';
-    page3.innerHTML = '-';
-    if (prevstr.length > 5) {
-        if (prevstr.indexOf("page/") != -1) {
-            var prevnum = parseInt(prevstr.split("page/")[1]);
-            page1.innerHTML = prevnum;
-            page2.innerHTML = prevnum + 1;
-        } else {
-            page1.innerHTML = 1;
-            page2.innerHTML = 2;
-        }
-    }
-    if (nextstr.indexOf("page/") != -1) {
-        var nextnum = parseInt(nextstr.split("page/")[1]);
-        page3.innerHTML = nextnum;
-        page2.innerHTML = nextnum - 1;
-    }
+    //文章阅读热度
+    var pl = $("#pl").html();
+    var rootaddr = $("#rootaddr").html();
+    pl = pl.replace(rootaddr, "");
+    $("#hotnum").attr('id', pl);
 </script>
-                            <div style="padding-bottom:10%"></div>
+                    <div class="toc-container">
+                        <ul class="markdownIt-TOC">
+<li><a href="#little-busters-%E4%BC%B4%E5%89%A7%E9%9A%8F%E6%83%B3">Little Busters ! 伴剧随想</a></li>
+</ul>
+
+                    </div>
+                    <div class="tog">
+                        <div class="toggleContainer">
+                            <div class="toggle">
+                                <i class="fas fa-angle-double-up"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-2"></div>
-                    
+                    <div id="comment" class="comment" style="background: white">
+                        <div class="commentcontainer">
+                            
+                            <style>
+    @media screen and (min-width: 1300px) {
+        .veditor::placeholder {
+            color: #b3b3b3;
+            font-size: 18px;
+            text-align: center;
+            line-height: 3rem;
+            font-family: kaiti;
+        }
+    }
+</style>
+
+<body>
+    <div id="vcomments">
+    </div>
+    <script src="https://SpookerV5.github.io/media/js/valine.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script>
+        var valine = new Valine();
+        var curpath = window.location.pathname;
+        if (curpath[curpath.length - 1] != '/')
+            curpath += '/'
+        valine.init({
+            el: '#vcomments',
+            appId: '0MOznRcTibDlG5kCtdFMvU5z-MdYXbMMI',
+            appKey: '27bf126FMrmX3jEmYRvU1tai',
+            notify: true,
+            verify: false,
+            avatar: 'retro',
+            pageSize: 10,
+            placeholder: '快来写评论吧！支持markdown的！  (｡･∀･)ﾉﾞ',
+            visitor: true, // 阅读量统计
+            recordIP: true,
+            path: curpath //[重点] 记得添加path路径
+        });
+    </script>
+    <script type="text/javascript">
+        var jrsc = '快来写评论吧！支持markdown的！  (｡･∀･)ﾉﾞ';
+        jinrishici.load(function (result) {
+            // 自己的处理逻辑
+            jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+                .dynasty + " · " + result.data.origin.author;
+        });
+    </script>
+
+</body>
+                            <div class="clear"></div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1 col-lg-2"></div>
+                <div id="bg">
+                </div>
             </div>
             
-                        <head>
+        
+        <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 </head>
 
@@ -1217,29 +1398,92 @@
         }
     }
 </script>
-                        
-        </div>
-        <div id="bg">
-        </div>
-        <div id="bgchoice" style="display: none">link
-                    </div>
-                    
-                    <div id="bgurl" style="display:none">https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images</div>
-                       
-            </div>
-</div>
-</div>
-
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-        </div>
-        <div id="domainname" style="display:none">https://SpookerV5.github.io
-                </div>
+        
+    </div>
+    
+    <div id="bgchoice" style="display: none">link
+    </div>
+    
+    <div id="bgurl" style="display:none">https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images</div>
+    
 </body>
+<script>
+    var img = $("img");
+    for (var i = 0; i < img.length; i++) {
+        if (img.eq(i).attr("class") == undefined) {
+            img.eq(i).attr("class", "lazyload");
+            var imgsrc = img.eq(i).attr("src");
+            img.eq(i).attr("data-original", imgsrc);
+            img.eq(i).attr("src", "");
+            img.eq(i).hide();
+        }
+    }
 
-</html>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    function refreshImg(imgclass) {
+        // 获取弹窗
+        var modal = document.getElementById('myModal');
+
+        // 获取图片插入到弹窗 - 使用 "alt" 属性作为文本部分的内容
+        var img = document.getElementsByClassName(imgclass);
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        for (var i in img) {
+            img[i].onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+
+        // 图片关闭
+        var modalImg = document.getElementById('img01');
+        // 鼠标点击模型外区域关闭登录框
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            if (menupos == 'left')
+                return true;
+            if (event.target == social) {
+                social.style.display = "none";
+            }
+        }
+    }
+
+</script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+<script>
+    //寻找所有code标签，加复制按钮鸭！(行内代码除外)
+    var codes = document.getElementsByTagName('code');
+    if (codes.length) {
+        for (var i = 0; i < codes.length; i++) {
+            //高度/行高=文本行数
+            // var rowNum=Math.round(codes[i].height()/parseFloat(codes[i].css('line-height')));
+            // console.log("当前有"+rowNum+"行");
+            var code_id = "code_id_" + i;
+            codes[i].setAttribute("id", code_id);
+            var ci = "#" + code_id;
+            var codedot = $(ci);
+            var rowNum = Math.round(codedot.height() / parseFloat(codedot.css('line-height')));
+            if (rowNum <= 1) continue;
+            var btn = document.createElement("button");
+            btn.setAttribute("class", "copybt");
+            btn.setAttribute("data-clipboard-target", "#" + code_id);
+            btn.innerHTML = '复制代码';
+            codes[i].parentNode.insertBefore(btn, codes[i]);
+        }
+    };
+    var cop = new ClipboardJS('.copybt');
+    cop.on('success', function (e) {
+        e.trigger.innerHTML = "复制成功~"
+        e.trigger.style.background = "#894e54"
+        e.clearSelection();
+    });
+    cop.on('error', function (e) {
+        e.clearSelection();
+    });
+</script>
 
 <script type="text/javascript">
     var message_Path = '/live2d/'
@@ -1251,6 +1495,23 @@
     loadlive2d("live2d", "https://SpookerV5.github.io/media/live2d/assets/tororo.model.json");
 </script>
 
+<script>
+    $(function () {
+        $('.toggleContainer').click(function () {
+            $('html,body').animate({
+                scrollTop: '0px'
+            }, 800);
+        });
+        $(window).scroll(function () {
+            var st = $(window).scrollTop();
+            if (st > 30) {
+                $(".toggleContainer").fadeIn(400);
+            } else {
+                $(".toggleContainer").fadeOut(100);
+            }
+        });
+    });
+</script>
 
 <script>
     var bgchoice = $('#bgchoice').html();
@@ -1260,10 +1521,112 @@
         for (var i = 0; i < 3; i++)
             bgurl = bgurl.replace("\\", "/");
     bg.css("background", "url('" + bgurl + "')");
+</script>
 
+
+<script src="https://SpookerV5.github.io/media/js/index.js"></script>
+
+
+
+<!-- 动态更改上(下)一篇博客图片框长宽 -->
+<script>
+    npcontainer = document.querySelector('#npcontainer');
+    npstyle = window.getComputedStyle(npcontainer, null);
+    npwidth = npstyle.width;
+    npheight = 0.6 * Number(npwidth.replace("px", ""));
+    npheight = npheight.toString() + "px";
+    var op = $(".opimg");
+    op.css("height", npheight);
+</script>
+
+<script src="https://SpookerV5.github.io/media/share/dist/Share.js"></script>
+
+<script>
+    var avatarSrc = $(".avatar").attr("src");
+    var dp = document.getElementsByClassName("describtion")[0].innerHTML;
+</script>
+
+
+<script>
+    var title = document.getElementById("texttitle").getElementsByTagName("h2");
+
+    var share = new Share('.share', {
+        title: title[0].innerHTML,
+        initialized: true,
+        //默认获取网站描述
+        description: dp,
+        //网站图片默认获取的是设置的用户头像
+        image: avatarSrc,
+        //激活的分享网站
+        sites: ["weibo", "qq", "wechat", "douban", "qzone", "facebook", "twitter", "google"],
+        //微信分享PC端会生成二维码分享,移动端如果可以唤起微信最好
+        wechatQrcodeTitle: "微信扫一扫：分享", // 微信二维码提示文字
+        wechatQrcodeHelper: '<p>微信里扫一下二维码</p><p>便可将本文分享至朋友圈。</p>',
+        //关闭的网站分享
+        disabled: ['google', 'linkedin'],
+        wechatQrcodePosition: 'bottom'
+    });
+
+    //点击分享按钮展现出分享icons
+    var sharebtnTag = false;
+    $(".sharebtn").click(function () {
+        if (!sharebtnTag) {
+            $(".share").show();
+            sharebtnTag = true;
+        }
+        else {
+            $(".share").hide();
+            sharebtnTag = false;
+        }
+    })
+
+    var donatebtnTag = false;
+    $(".donateImg").click(function () {
+        if (!donatebtnTag) {
+            $(".donate").show();
+            donatebtnTag = true;
+        }
+        else {
+            $(".donate").hide();
+            donatebtnTag = false;
+        }
+    })
+
+    //加载后的事件同步（阅读量、移动端评论等
     window.onload = function () {
+        getHotnum();
+        var sharepc = $(".share").eq(0).html();
+        $(".share").eq(1).html(sharepc);
+        document.getElementById("veditor").setAttribute("placeholder", jrsc);
         aplayerbtnInit();
     }
 </script>
 
-<script src="https://SpookerV5.github.io/media/js/index.js"></script>
+
+<script>
+    jQuery(document).ready(function ($) {
+        function lazyload() {
+            var oLazyload = $("img.lazyload"),
+                fLazyload = function (hLazyload) {
+                    var nLazyload = $(window).height() + $(document).scrollTop();
+                    oLazyload.each(function () {
+                        $(this).offset().top < nLazyload && ($(this).trigger("appear"), oLazyload =
+                            oLazyload.not(this));
+                    }), 0 == oLazyload.length && $(window).unbind("scroll", fLazyload);
+                };
+            oLazyload.each(function () {
+                $(this).one("appear", function () {
+                    $(this).attr("src", $(this).attr("data-original"));
+                    $(this).fadeIn(500);
+                });
+            }), $(window).bind("scroll", fLazyload), fLazyload();
+        }
+        lazyload();
+        refreshImg("lazyload");
+    });
+</script>
+
+<!-- <script src="https://SpookerV5.github.io/media/js/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.13.0/dist/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.6.1/dist/av-live-query-min.js"></script> -->
+
