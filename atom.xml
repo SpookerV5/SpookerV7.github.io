@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SpookerV5.github.io</id>
     <title>Lenger的后花园</title>
-    <updated>2021-04-04T13:23:12.481Z</updated>
+    <updated>2021-05-12T15:54:24.240Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SpookerV5.github.io"/>
     <link rel="self" href="https://SpookerV5.github.io/atom.xml"/>
@@ -10,6 +10,51 @@
     <logo>https://SpookerV5.github.io/images/avatar.png</logo>
     <icon>https://SpookerV5.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Lenger的后花园</rights>
+    <entry>
+        <title type="html"><![CDATA[信息时代生存法则]]></title>
+        <id>https://SpookerV5.github.io/post/xin-xi-shi-dai-sheng-cun-fa-ze/</id>
+        <link href="https://SpookerV5.github.io/post/xin-xi-shi-dai-sheng-cun-fa-ze/">
+        </link>
+        <updated>2021-05-12T15:51:50.000Z</updated>
+        <content type="html"><![CDATA[<p>封面是 <strong><a href="https://twitter.com/merryweatherey">merryweatherey</a></strong> 的 IE 娘系列哈哈，真的很好看的漫画，可以在 DMZJ 找到。</p>
+<p>然后之前总想写一篇关于 RSS 的文章来着，那么就开始吧！</p>
+<h1 id="rss-是什么东西">RSS 是什么东西？</h1>
+<p>经常用博客的人都知道这个东西吧，不过还是要说一下的好，以下介绍摘自维基百科。</p>
+<blockquote>
+<p><strong>RSS</strong>（全称：<a href="https://zh.wikipedia.org/wiki/Resource_Description_Framework">RDF</a> Site Summary；Really Simple Syndication[<a href="https://zh.wikipedia.org/wiki/RSS#cite_note-powers-2003-1-2">2]</a>），中文译作<strong>简易信息聚合</strong>[<a href="https://zh.wikipedia.org/wiki/RSS#cite_note-3">3]</a>，也称<strong>聚合内容</strong>[<a href="https://zh.wikipedia.org/wiki/RSS#cite_note-%E5%BC%A0%E9%94%902015-4">4]</a>，是一种<a href="https://zh.wikipedia.org/wiki/%E6%B6%88%E6%81%AF%E4%BE%86%E6%BA%90">消息来源</a>格式规范，用以<strong>聚合经常发布更新资料的网站</strong>，例如<a href="https://zh.wikipedia.org/wiki/%E9%83%A8%E8%90%BD%E6%A0%BC">博客</a>文章、新闻、<a href="https://zh.wikipedia.org/wiki/%E9%9F%B3%E8%A8%8A">音频</a>或<a href="https://zh.wikipedia.org/wiki/%E8%A6%96%E8%A8%8A">视频</a>的网摘。RSS文件（或称做摘要、网络摘要、或频更新，提供到频道）包含全文或是节录的文字，再加上发布者所订阅之网摘资料和授权的元数据。简单来说 RSS 能够让用户订阅个人网站个人博客，当订阅的网站有新文章是能够获得通知。</p>
+</blockquote>
+<p>我个人理解就是在网上订报纸啦（</p>
+<h1 id="用什么订阅-rss-呢">用什么订阅 RSS 呢？</h1>
+<h2 id="web">Web</h2>
+<p>可以使用的网站有很多，总结下来个人觉得比较好用的是下面这个：</p>
+<p><strong><a href="https://feeds.pub/">Feeds Pub</a></strong> 提供50个源的订阅，没有阅读视图，可以订阅外网，仅支持导入，可以满足绝大多数人的要求了</p>
+<h2 id="windows">Windows</h2>
+<p>在 Windows 上想要找个免费好看的 RSS 阅读器实在是太困难了，直到我发现了 Fluent Reader</p>
+<p><a href="https://github.com/yang991178/fluent-reader/releases"><strong>Fluent Reader</strong></a> 不限订阅，开源，支持阅读视图，支持导入导出，美观，可以说秒杀一众 win 的付费阅读器，<s>没错说的就是只给20个源免费的 irreader</s></p>
+<h2 id="macos">MacOS</h2>
+<p>在 MacOS 上比较好用的 RSS 阅读器就比较多了，我自己用的是老牌的 RSS 阅读器 Reeder</p>
+<p><strong><a href="https://www.reederapp.com/">Reeder 5</a></strong> 遗憾的是国区全端都下架了，所以入正是不可能入正了，<a href="https://xclient.info/s/reeder.html">这里</a>可以下载，可以说是 apple 生态的最强 rss 阅读器，在 icloud 的加持下可以做到苹果全生态统一的体验，不限订阅，支持阅读视图，支持导入导出，支持自动重点标粗（挺鸡肋的），切换动画制作相当有水平！</p>
+<p><strong><a href="https://apps.apple.com/cn/app/fluent-%E9%98%85%E8%AF%BB%E5%99%A8/id1520907427?mt=12">Fluent Reader</a></strong> 开源阅读器也已经上架了 App Store For Mac，和 Win 体验一样，不失为一个好选择。</p>
+<h2 id="ios-ipad-os">iOS &amp; iPad OS</h2>
+<p>可以直接选择 Reeder 5 了，试了下国产的 RSS 阅读器，都不太成熟，而且国区已经下架了好多此类软件（比如轻芒阅读），所以获取方式是马云家搜索这个软件来花几块钱买个 Reeder 的已购共享账号，体验同 MacOS 版。</p>
+<h2 id="android">Android</h2>
+<p>之前我用的都是轻芒杂志，但是 5 月 7 日，这个老牌 app 也终于停止服务了，我还没有在安卓端试过，所以不做推荐，其实 Telegram 也有 RSS bot 之类，相必很好用，老牌的 Feedly 可能也不错，不过都需要外网，估计会有些麻烦。</p>
+<h1 id="rss-在哪里可以获得呢">RSS 在哪里可以获得呢？</h1>
+<p>一般来说，如果是博客的话，大多都支持 RSS 订阅，如果博客有 RSS 订阅标示，那么直接就可以取得链接，但有的博客没有图标，所以我总结了个常用方法：</p>
+<p>博客域名链接后加 /atom 或 /feed 可以得到很多博客的 RSS 链接 <s>包括本站</s></p>
+<p>当然 RSS 可以订阅的远不止博客，她可以让你订阅互联网几乎一切讯息，在这里就要感谢伟大的 <strong><a href="https://docs.rsshub.app/">RSSHub</a></strong>，万物皆可 RSS！</p>
+<blockquote>
+<p>RSSHub 是一个开源、简单易用、易于扩展的 RSS 生成器，可以给任何奇奇怪怪的内容生成 RSS 订阅源。RSSHub 借助于开源社区的力量快速发展中，目前已适配数百家网站的上千项内容</p>
+</blockquote>
+<p>在 RSSHub 的 docs 页可以看到 相关项目 ，<a href="https://github.com/DIYgod/RSSHub-Radar">RSSHub Radar </a> 是一个可以帮助你快速发现和订阅当前网站 RSS 和 RSSHub 的浏览器扩展，非常好用，除了无法识别部分博客网站的 RSS <s>比如本站</s>，还有其他懒人 APP 可以直接生成 RSS，比如 <a href="https://github.com/Cay-Zhang/RSSBud">RSSBud </a>和 <a href="https://github.com/LeetaoGoooo/RSSAid">RSSAid </a>。</p>
+<p>遗憾的是 RSSHub 已经被墙，但是可以找到许多镜像，比如 <strong><a href="https://www.ioiox.com/archives/94.html">IOIOX</a></strong> 提供的镜像，直接拿来改后缀就好了。</p>
+<h1 id="杂谈-rss">杂谈 RSS</h1>
+<p>作为上世纪末提出的概念，RSS 的发展异常曲折，从曾经风光一时到现在几乎无人问津，而互联网的时代也已悄然变化。传统媒体如报纸期刊在新媒体快速发展的当下已黯然失色，人们获取信息的渠道来自于无孔不入的由大数据引导的网络，我们所拥有的信息选择的权利到底是增加了还是减少了？如果深入探讨，恐怕会得到唯一的真相，我们在被信息控制着。RSS，她给予用户自由选择的权利，使用户主导着自己想要的讯息，不必被泛滥的信息海洋所淹没。 RSS 明显不利于社交平台的引流，不利于数据的变现，也不利于监管，甚至需要一定的学习成本，甚至也会造成对博客流量的浪费，所以势必不广为人知。</p>
+<p>但 RSS 可以带来专注，可以带来信息时代的生存自由，可以为热爱博客的人提供传信渠道，在新世界将到未到之时，我需要这种方式，与互联网的海量信息中的极少量，保持联络，这就是，我在当下信息时代的生存之道。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/05/12/Vdzch7jIv8g26E1.jpg" alt="33cfe7f50dd2c4f311a69079f03cbe21.jpeg" loading="lazy"></figure>
+<p>最近看完了<a href="https://movie.douban.com/subject/26387813/">疑犯追踪</a>，对于宅总的这段话，不能更加认同。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Little Busters ! 伴剧随想]]></title>
         <id>https://SpookerV5.github.io/post/little-busters-ban-ju-sui-xiang/</id>
@@ -490,79 +535,6 @@ style="width:700px;height:480px">
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=5299097&auto=0&height=66"></iframe>
 <p>最近看了《凉宫春日的消失剧场版》（<s>巨长版</s> ），萨蒂钢琴曲《裸体歌舞》印象深刻，可能人们还是喜欢一切如故吧，心疼大萌神。<br>
 <img src="https://i.niupic.com/images/2020/12/13/96Uw.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[院新媒体中心2020培训]]></title>
-        <id>https://SpookerV5.github.io/post/yuan-xin-mei-ti-zhong-xin-2020-pei-xun/</id>
-        <link href="https://SpookerV5.github.io/post/yuan-xin-mei-ti-zhong-xin-2020-pei-xun/">
-        </link>
-        <updated>2020-12-06T17:16:24.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="对新社员想说的">对新社员想说的</h1>
-<p>by 新媒体2020学年技术部长   Lenger</p>
-<p>首先，祝贺各位通过了面试，来到了新媒体大家庭！以下是学长总结的一些工作经验</p>
-<p>注：以<strong>部长</strong>的安排为准 （不懂的问他就对啦）</p>
-<h2 id="推文编辑">推文编辑</h2>
-<p>我们使用的推文编辑器是秀米，网址是：https://xiumi.us/</p>
-<p>建议在电脑使用Chrome浏览器编辑。在秀米编辑器上要注意色调、格式、标题等方面。</p>
-<p>格式是：文字一般为<strong>14-15</strong>号，行距<strong>1.5倍</strong>，<strong>两边对齐</strong>，建议字体颜色为 <strong>深黑/黑色</strong>，注意<strong>段与段之间要空一行</strong></p>
-<p>下面是上任部长的话，很受用：</p>
-<blockquote>
-<p>标题最好一行能够显示完，当然一些大型活动中活动名称、学院名称需要完整地显示出来，之后你们编辑的时候会给你们提出来的。格式可以参考xxx|xxx。</p>
-<p>给推文封面选图的话要清晰的，把主要信息放在中间。</p>
-<p>后期发现错别字可以在微信公众号平台进行修改（一篇只能修改5个字，不能添加字，也不能更改封面标题）。</p>
-<p>你们在排版遇到问题的时候从这两个大方面思考：</p>
-<p>1.简洁，别把太多不需要的东西呈现给读者。 2.读者的观感。</p>
-<p>最后，你们一定要发送到手机上预览，手机上和电脑端进行预览有一些不同。</p>
-<p>预览微信号（隐私原因佚名）</p>
-<p>最后的最后！推荐的一些微信公众号：重庆大学（值得借鉴）、Vista看天下（了解当下热点）、新媒体课堂（新媒体运营技巧）、微果酱（新媒体运营技巧）、北美留学生日报（比较适合我们学院吧）、我要WhatYouNeed（很多引人深思的文章）、重庆大学学生会（值得借鉴）、共青团中央（很多新闻）、人民日报（很多新闻）</p>
-</blockquote>
-<h3 id="在编辑的过程中你可能会遇到如下问题">在编辑的过程中，你可能会遇到如下问题：</h3>
-<hr>
-<p>图片过大无法上传：貌似限制单个图片大小在10M以内，这里建议使用在线压图或百度类似网站：</p>
-<p>http://www.zuohaotu.com/image-compress.aspx</p>
-<hr>
-<p>不会保存：Windows：Ctrl + S    MacOS：Command + S</p>
-<hr>
-<p>不会套模板：</p>
-<p>在首页可以看到挑选风格排版，进入后选择另存给自己，在我的图文查看</p>
-<hr>
-<p>不会插入视频：由于微信的限制，在一篇推文里，只能插入腾讯视频的链接视频，且限制最多3个，所以如果视频太多可以将链接转为二维码图片</p>
-<hr>
-<p>不会制作左右滑动图片：</p>
-<p>在图片-多图里可以找到你想要的模板</p>
-<hr>
-<h2 id="ps学习">PS学习</h2>
-<p>这个...学长当年是自学的，<s>bilibili大学</s></p>
-<p>这里推荐以下课程：</p>
-<p>https://www.bilibili.com/video/BV1Xs411q7DW   doyoudo，及其详细</p>
-<p>https://www.bilibili.com/video/BV1zs411o7o1     oeasy，学姐推荐的，很专业</p>
-<p>https://www.bilibili.com/video/BV1Ms41137g2   冯注龙的课，很好笑！很轻松！</p>
-<p>软件请在微信公众号<strong>DY软件管家</strong>获取，且用且珍惜</p>
-<p>善用模板，会大大减少工作时间</p>
-<p>这里推荐的字体下载：http://www.hanyi.com.cn/  汉仪字库，非商用可免费下载</p>
-<p>推荐的模板网站</p>
-<p>免费：http://sc.chinaz.com/psd/free.html  站长素材，免费的PSD很多</p>
-<p>免费：https://www.psjia.com/  PS家园  应有尽有，非常好用！</p>
-<p>付费：https://588ku.com/    千库网，VIP买断制</p>
-<h2 id="pr学习">PR学习</h2>
-<p>这个，我们的部长很厉害！学长还是比较喜欢直接魔改别人的插件和做好的转场doge <s>懒</s></p>
-<p>Pr的课推荐</p>
-<p>https://www.bilibili.com/video/BV1Ts411C7Yd    八百多万播放量，群众眼光是雪亮的</p>
-<p>软件请在微信公众号<strong>DY软件管家</strong>获取，且用且珍惜</p>
-<h2 id="迎新晚会等相关工作">迎新晚会等相关工作</h2>
-<p>去年学长负责的是：门票、现场弹幕工作</p>
-<p>现场要有直播，当时用的是b站的直播</p>
-<p>弹幕和抽奖的话是一个叫弹幕派的小程序</p>
-<p>投票的话是用电脑版的易班问卷</p>
-<p>院刊学长负责的是摄影版，可以参考上一本的设计，要留心观察</p>
-<p><s>学长的灵感就来自Windows 10的磁贴</s></p>
-<p>总之希望大家多多配合，集思广益，这样效果会非常好</p>
-<h2 id="总结">总结</h2>
-<p>以前前部长的一句话结尾吧：</p>
-<blockquote>
-<p>百度是个好老师。</p>
-</blockquote>
 ]]></content>
     </entry>
 </feed>
