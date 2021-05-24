@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SpookerV5.github.io</id>
     <title>Lenger的后花园</title>
-    <updated>2021-05-22T03:57:17.873Z</updated>
+    <updated>2021-05-24T15:32:38.950Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SpookerV5.github.io"/>
     <link rel="self" href="https://SpookerV5.github.io/atom.xml"/>
@@ -38,7 +38,7 @@
 <h2 id="ios-ipad-os">iOS &amp; iPad OS</h2>
 <p>可以直接选择 Reeder 5 了，试了下国产的 RSS 阅读器，都不太成熟，而且国区已经下架了好多此类软件（比如轻芒阅读），所以获取方式是马云家搜索这个软件来花几块钱买个 Reeder 的已购共享账号，体验同 MacOS 版。</p>
 <h2 id="android">Android</h2>
-<p>之前我用的都是轻芒杂志，但是 5 月 7 日，这个老牌 app 也终于停止服务了，我还没有在安卓端试过，所以不做推荐，其实 Telegram 也有 RSS bot 之类，相必很好用，老牌的 Feedly 可能也不错，不过都需要外网，估计会有些麻烦。</p>
+<p>之前我用的都是轻芒杂志，但是 5 月 7 日，这个老牌 app 也终于停止服务了，我还没有在安卓端试过，所以不做推荐，其实 Telegram 也有 RSS bot 之类，想必很好用，老牌的 Feedly 可能也不错，不过都需要外网，估计会有些麻烦。</p>
 <h1 id="rss-在哪里可以获得呢">RSS 在哪里可以获得呢？</h1>
 <p>一般来说，如果是博客的话，大多都支持 RSS 订阅，如果博客有 RSS 订阅标示，那么直接就可以取得链接，但有的博客没有图标，所以我总结了个常用方法：</p>
 <p>博客域名链接后加 /atom 或 /feed 可以得到很多博客的 RSS 链接 <s>包括本站</s></p>
