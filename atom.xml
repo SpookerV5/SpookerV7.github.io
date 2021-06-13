@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SpookerV5.github.io</id>
     <title>Lenger的后花园</title>
-    <updated>2021-05-29T17:12:42.721Z</updated>
+    <updated>2021-06-13T17:47:14.671Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SpookerV5.github.io"/>
     <link rel="self" href="https://SpookerV5.github.io/atom.xml"/>
@@ -10,6 +10,50 @@
     <logo>https://SpookerV5.github.io/images/avatar.png</logo>
     <icon>https://SpookerV5.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Lenger的后花园</rights>
+    <entry>
+        <title type="html"><![CDATA[关于我在出租屋玩体感游戏这档事]]></title>
+        <id>https://SpookerV5.github.io/post/guan-yu-wo-zai-chu-zu-wu-wan-ti-gan-you-xi-zhe-dang-shi/</id>
+        <link href="https://SpookerV5.github.io/post/guan-yu-wo-zai-chu-zu-wu-wan-ti-gan-you-xi-zhe-dang-shi/">
+        </link>
+        <updated>2021-06-13T17:40:48.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="以下回想">以下回想</h1>
+<p>由于 COOP 计划实习的我莫名其妙的陷入在江苏无锡的一家做雷达的公司当实习生并且独自住出租屋体验社畜生活的怪现状，在周末的时候就会选择在人生地不熟的地方老老实实宅在出租屋里。在体验了补番、电影、画画、拆机、学 Python（大雾）等等各种消遣之后，终于开始想玩玩体感游戏<s>锻炼身体？</s>，于是开始寻找当下玩体感游戏的方法。</p>
+<p>首先当然要考虑老任的 Switch 了，健身环大冒险早有耳闻，遂观望了一下国行<s>勇士</s>价格，套餐居然只要 2000 软妹币，实在是便宜，但是想到自己为了一个体感游戏去买套 Switch 感觉不太划算<s>容易吃灰</s>，，毕竟如果下半年回学校是不可能继续玩的。不久又想到多年前老任发布过 Wii 这款体感主机，于是打开某宝看了看，大概 400 软妹币左右可以买到全套，但是出租屋就一台电脑，没有显示器和电视，而且 Wii 的输出也只有 480P ，想想也是惨不忍睹，看来买主机的愿望又破灭了。</p>
+<iframe src="//player.bilibili.com/player.html?aid=970053875&bvid=BV15p4y1k76Q&cid=248763069&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p>之后在 B站 搜索时偶然发现用 Wii 的手柄配合感应条可以在 PC 端上的海豚模拟器模拟运行 Wii 体感游戏，看来折腾的时候又来了，立马花 100 多软妹币购入装备，于是便开始了探索。</p>
+<h1 id="准备工作">准备工作</h1>
+<p>软件方面，海豚模拟器最新开发版、想玩的体感游戏的 .wbfs 文件</p>
+<p>硬件方面，Wii 鸡腿加手柄（带加速器最好）、USB红外感应条</p>
+<figure data-type="image" tabindex="1"><img src="https://sm.ms/image/WHu5v9xz6L2kUAF" alt="" loading="lazy"></figure>
+<h1 id="设置模拟器">设置模拟器</h1>
+<h2 id="方法一模拟器模拟连接">方法一：模拟器模拟连接</h2>
+<p>这是最基础的方法，可以使用但缺点也不少，比如经常性的断连，而且 Win10 上会出现需要输入 Pin 码的问题，不太好解决。这个是找到的教程</p>
+<iframe src="//player.bilibili.com/player.html?aid=968197205&bvid=BV1Cp4y1Q7uG&cid=189827002&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p>关于 Pin 码的问题</p>
+<h2 id="方法二模拟器直连">方法二：模拟器直连</h2>
+<p>这个方法的最大好处是重连非常方便，基本可以做到和真实的 Wii 一样的体验效果，缺点是最好要花 10 元左右购买 CSR4.0 的 USB 蓝牙模块，而且这个蓝牙模块只能被手柄独占。这个方法是通过询问淘宝客服得知的，亲测完美，教程是贴吧的一篇帖子 <a href="https://tieba.baidu.com/p/6515340342">新人篇 电脑之Wii模拟器使用及手柄直连体验感受方法</a> 其中所提到的软件是 <a href="https://zadig.akeo.ie/">Zadig</a> ，东芝的驱动 <a href="https://pan.baidu.com/s/1sjkExxr">下载</a></p>
+<h1 id="体感游戏体验">体感游戏体验</h1>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/06/14/EdPuSaez29nHZlv.png" alt="屏幕截图 2021-06-14 003928.png" loading="lazy"></figure>
+<p>在手柄连上后就可以放心游玩 Wii 的各种游戏了，首先体验的是 Wii Sports，Wii 上面堪比健身环大冒险的名作，有两代</p>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2021/06/14/bcwqfSxdTMsUYEv.png" alt="屏幕截图 2021-06-14 004618.png" loading="lazy"></figure>
+<p>然后是有氧拳击，已经被移植到 NS 端了，还是很有趣的，当然也很累（</p>
+<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2021/06/14/BsXeJxSvqYDTbfR.png" alt="屏幕截图 2021-06-14 004731.png" loading="lazy"></figure>
+<p>最最良心的 Wii 适配作居然是育碧的舞力全开，支持到 2020 版本，这里我也是下载了大佬整理的整合包。</p>
+<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2021/06/14/esU4QYOxMozPuCw.png" alt="屏幕截图 2021-06-14 004950.png" loading="lazy"></figure>
+<h1 id="尾声-新的开始">尾声 &amp; 新的开始</h1>
+<p>不得不说虽然 Wii 是很古老的产品，但是 Wii 平台的游戏却非常经典，马里奥银河的两代，塞尔达天空之剑（这个好像要被移植到 NS 平台了），星之卡比，太鼓达人，马里奥派对赛车网球足球，动物森友会等等，在 Wii 的作品在当下也不过时。而我在了解海豚模拟器的同时却意料之外的发现了更多的模拟器，于是开始了新的折腾。</p>
+<h2 id="cemu-模拟器-wiiu">Cemu 模拟器 ---&gt; WiiU</h2>
+<p>WiiU是老任在 Switch 前发布的一代销量暴死的主机，但在这台主机上却首发了迄今为止最伟大的开放世界RPG游戏--塞尔达传说旷野之息。遥想当我高考完后在朋友那里用 Switch 玩野炊时，720P 的小屏幕和掉帧丝毫没有影响我对款游戏的热爱，但也是有一点遗憾，现在 Cemu 可以解决这个问题，于是又买了 Switch 的国产手柄，在加上折腾了一天，终于体验到了不掉帧的野炊！顺便还下了 马里奥赛车8 和 零·濡鸦之巫女，通过手柄体感的体验还是很不错的。这里也顺便催一催野炊2，真的是非常期待！</p>
+<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2021/06/14/CBaQ4U8eFi96KwY.png" alt="屏幕截图 2021-06-14 005404.png" loading="lazy"></figure>
+<h2 id="yuzu-模拟器-ryujinx-模拟器-switch">Yuzu 模拟器 &amp; Ryujinx 模拟器 ---&gt; Switch</h2>
+<p>没错，老任的东西居然又又又又被模拟了，但是因为太偏离我玩体感的目的了所以就没继续研究了，而这两都是开源项目。</p>
+<p>总之，将体感和游戏结合的创意非凡，我想，当我真的成为打工人的时候，入手一台 Switch 一定会提升我的生活幸福感吧。</p>
+<h1 id="资源整理">资源整理</h1>
+<p>Wii 游戏存档  链接: https://pan.baidu.com/s/1Ekrw04RGKELlMidL5X678Q  密码: der3</p>
+<p>WiiU Cemu 相关存档 链接: https://pan.baidu.com/s/1fJyu5hPifgOnM6LSDt_pzw  密码: gvgs</p>
+<p>以上侵删</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[《Summer Pockets》 A&P 线通关杂谈]]></title>
         <id>https://SpookerV5.github.io/post/lesslesssummer-pocketsgreatergreater-aandp-xian-tong-guan-za-tan/</id>
@@ -485,62 +529,6 @@ style="width:700px;height:480px">
 <p>谷川流在后记中也提到了京都动画的事，时过境迁，这对作者来说恐怕有些伤感，对我们读者也是如此。</p>
 <p>“夏天就要来了。” 这是直观篇的结尾。</p>
 <p>那么，我们下次再见！</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2020年度总结]]></title>
-        <id>https://SpookerV5.github.io/post/2020-nian-du-zong-jie/</id>
-        <link href="https://SpookerV5.github.io/post/2020-nian-du-zong-jie/">
-        </link>
-        <updated>2020-12-24T04:57:35.000Z</updated>
-        <content type="html"><![CDATA[<p>1月：大一上结束，考试后回家</p>
-<p>2月：过年，期间疫情爆发，应该没做什么的</p>
-<p><s>其实还是有做什么的 XD</s></p>
-<p>从酷友那里购入日版有锁 iPhone SE（￥300），然后探讨了越狱的方法并成功啦！然后发现可以邮件解锁，血赚！iOS搞机成就达成！（虽然快递等了我2周多TAT）</p>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/12/24/RQynLX5hskMzge6.jpg" alt="" loading="lazy"></figure>
-<p>买了吼姆啦的手办，黑丝brbr</p>
-<p>在家里翻到了两台相机，目前还在吃灰，不过会用的吧...</p>
-<p>3-5月：迫于疫情被逼无奈在家学习，这期间各种划水（x</p>
-<p>6月：返校了，迎来的是平均每 2 天来一次的考试TAT，而且最后感觉考的也一般，GPA降了 0.1</p>
-<p>购入 iPad Pro 10.5 + Apple Pencil，花了 3000，二手，很好用，而且 120Hz 的观感提升真的不是一点半点</p>
-<p>7-8月：暑假，这一个暑假奉献给了练车，用42天从科目一开始一路顺风拿本，非常幸运！</p>
-<p>然后试着学了一点 Python 爬虫，<s>虽然目前好像并没有什么用</s></p>
-<p>9-12月：大二上学期</p>
-<p>学习，在比较卷的学院还真是可怕！</p>
-<p>不过整体感觉已经好起来了，<s>当然是幻觉</s></p>
-<p>错过了很多竞赛机会，比如数模啊，机器人队啊，电赛啊啥子的，不过感觉大二的我还没有足够能力，组队了也是打打杂吧</p>
-<p>这期间参加了 51单片机 的培训，不过感觉自己划水了，所以现在努力重新学习</p>
-<p>参加了学院的老带新活动，学弟学妹还真是很有朝气，希望他们一年后能成为大佬</p>
-<p>购入初音的泡面压和心心念念的 fufu，葱葱人充值信仰 upup！</p>
-<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/12/24/gByOeZzhX6oS9NM.jpg" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2020/12/24/aT8ZJvoMnj4QILY.jpg" alt="来吃你家大米啦！" loading="lazy"></figure>
-<p>和酷友py购入 MacBook Air 2013中（￥1500），和 AirPods 一代（￥330）苹果生态初步形成，iCloud 同步真的很好用！笔记 iPad 记马上可以用 MacBook 看，复习的效率提升了很多，虽然大果粒屏确实名不虚传TAT</p>
-<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2020/12/24/xKG6ND5CTjcmXnO.jpg" alt="" loading="lazy"></figure>
-<p>换手机啦！Samsang A70 → Realme Q2，终于用上了 5G！Realme 的系统很简洁，就是 天玑800u 的拍照真的是硬伤，似乎是联发科通病。</p>
-<p>等待了很久的《凉宫春日的直观》终于到手了！</p>
-<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2020/12/24/wQkaxZM4JOSolIB.jpg" alt="" loading="lazy"></figure>
-<p>努力画了张长门有希！</p>
-<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2020/12/24/YbKkUG79E1qslZx.png" alt="" loading="lazy"></figure>
-<p>以上基本是 2020 的一些重要记忆了。</p>
-<hr>
-<p>2020 年从哪一个方面来看都是不太寻常的一年，这一年有疫情，有美帝的制裁...上半年因为疫情只能在家里上网课，下半年作为中外合作学院，院里面的美方老师也是只有用Cisco在线授课，今年其实在家里和宿舍里学习了大学一半的课。不得不说在线上课的弊端还是很明显的，人似乎做事需要仪式感，而在家里和宿舍里则完全没有这种感觉，导致了效率的下降。</p>
-<p>2020 不能说是很顺利的一年。在这一年里，错过了很多机会，院里的大佬们即使在家里也可以学习得很用心，在学校则更不例外，比如在暑假我练车时，他们参加了校内数模培训。学院的德育奖学金（￥10000），要求体测成绩要在 80 分以上，所以也是无法申请。室友有加入了机器人队的，有加入国创且顺利答辩的，而我加入的项目才刚刚起步。</p>
-<p>2020 也并非毫无收获的一年。四级通过，驾照拿到，同时还获得了 AHA 急救证书，收获颇丰。等待了很久的凉宫出了新作，难忘看到谷川流对京都动画的感谢时那种感动，同时宿舍的桌面上也是多了许多东西，机械键盘啦，耳机啦，按摩仪啦，幸福感提升了不少。</p>
-<figure data-type="image" tabindex="7"><img src="https://i.loli.net/2020/12/24/oragpy41hzWlQFd.jpg" alt="" loading="lazy"></figure>
-<p>写到这里忽然不知道写写什么了，这么一看 2020 自己似乎没什么成长？也并不是如此。成长始终是潜移默化的事，自己很难察觉，而自认为最大的成长是我已不再对未来迷茫。在大一时，我曾不停的问自己几个问题：</p>
-<pre><code>我为何要在学院里努力学习？
-为何我时常感到寂寞与不合群？
-我今后到底想从事什么工作？
-</code></pre>
-<p>现在这些问题都一一得到了我自己的理解和回答，果然与自己和解是最重要的。总结下来，这些问题的答案其实都很简单。</p>
-<blockquote>
-<p>你要做一个不动声色的大人了。不准情绪化，不准偷偷想念，不准回头看。去过自己另外的生活。你要听话，不是所有的鱼都会生活在同一片海里。——村上春树</p>
-</blockquote>
-<p>人各有志，有的人为快乐而活，有的人为信念而活，有的人为利益而活，还有为其他而活的人，就像下雨天的池塘，我们是雨滴，打落出涟漪，而其扩散并相互影响，但大家的最终目的是，为了自己的幸福。</p>
-<p>我觉得以上已经可以回答我的前两个问题，而第三个，我觉得我会去国企吧，国家电网是个不错的选择。</p>
-<p>希望 2021 的我，在实习的过程中有更多成长，所以来年的自己，加油！</p>
-<p>附图：</p>
-<figure data-type="image" tabindex="8"><img src="https://i.loli.net/2020/12/24/BRak5cC7HvmJ3WU.png" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
 </feed>
