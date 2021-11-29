@@ -10,11 +10,15 @@
         },
         {
             "selector": ".search-input",
-            "text": ["在找什么东西呢，需要帮忙吗？"]
+            "text": ["只阔以搜索标题哦"]
+        },
+        {
+            "selector": "#live2d",
+            "text": ["快来和我一起御风飞行吧~"]
         },
         {
             "selector": ".avatar",
-            "text": ["这是我喜欢的人呢(〃∀〃)！"]
+            "text": ["快来交换友链吧！"]
         }
     ],
     "click": [
