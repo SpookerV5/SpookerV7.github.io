@@ -281,7 +281,7 @@ F4
                         src='https://SpookerV5.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://SpookerV5.github.io/images/avatar.png?v=1638203929442" class="avatar">
+            <img src="https://SpookerV5.github.io/images/avatar.png?v=1638252679787" class="avatar">
         </div>
         <div class="sitename">Lenger的后花园</div>
         <span class="description" data-text='["如果是你的话，一定没问题"]'>&nbsp;</span>
@@ -889,13 +889,13 @@ F4
                 shareInit();
             if (donateChoice)
                 donateInit();
-            if ("valine" == "default"&&!commentsHide) {
+            if ("twikoo" == "default"&&!commentsHide) {
                 $("#comment").hide()
                 commentsHide = true
             }
             lazyload();
             codeinit();
-            if ("valine" == "twikoo") {
+            if ("twikoo" == "twikoo") {
                 //twikoo头像更换
                 setTimeout(replaceAvatar, 3000);
                 setTimeout(replaceAvatar, 8000); //部分博主站点速度加载过慢，再添加一个延迟
@@ -1143,10 +1143,7 @@ menulist.eq(i).show();
                 <div id="rootaddr" style="display:none">https://SpookerV5.github.io</div>
                 
                     
-                    <span id="hotnum">
-                        <h4><i class="fa fa-eye" aria-hidden="true" style="color: #FF8C00;"></i>&nbsp;&nbsp;热度</i>: <i
-                                class="hotnum">loading...</i></h4>
-                    </span>
+                    <h4><i class="fa fa-eye" aria-hidden="true" style="color: #FF8C00;"></i>&nbsp;&nbsp;热度</i>: <span id="twikoo_visitors" class="hotnum">loading...</span></h4>
                     
                 
             </div>
@@ -1319,35 +1316,33 @@ menulist.eq(i).show();
                         <div class="commentcontainer">
                             
                                 
-                                    
-        <div id="vcomments">
-        </div>
-        <script>
-            var valine = new Valine();
-            var curpath = window.location.pathname;
-            if (curpath[curpath.length - 1] != '/')
-                curpath += '/'
-            valine.init({
-                el: '#vcomments',
-                appId: '0MOznRcTibDlG5kCtdFMvU5z-MdYXbMMI',
-                appKey: '27bf126FMrmX3jEmYRvU1tai',
-                avatar: 'retro',
-                pageSize: 10,
-                placeholder: '既然来了，何不畅所欲言呢？',
-                recordIP: true,
-                path: curpath //[重点] 记得添加path路径
-            });
-        </script>
-        <script type="text/javascript">
-            var jrsc = '既然来了，何不畅所欲言呢？';
-            jinrishici.load(function (result) {
-                // 自己的处理逻辑
-                jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
-                    .dynasty + " · " + result.data.origin.author;
-            });
-        </script>
+                                    <!-- 文章热度功能和评论整合 -->
+<style>
+  .twikoo p {text-align: left;}
+</style>
+<body>
+<div id="tcomment"></div>
+</body>
+<script>
+twikoo.init({
+  envId: 'twikoo-7gf7cuky0e8a2f7c',
+  el: '#tcomment',
+  // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，如果您的环境地域不是上海，需传此参数
+  // path: 'window.location.pathname', // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+})
+</script>
 
-
+<script>
+  var appid = '0MOznRcTibDlG5kCtdFMvU5z-MdYXbMMI';
+  var appkey = '27bf126FMrmX3jEmYRvU1tai';
+  if(typeof(AVinit)=="undefined"){
+    AV.init({
+      appId: appid,
+      appKey: appkey
+  });
+  AVinit = true;
+}
+</script>
                                     <div class="clear"></div>
                                 
                             
