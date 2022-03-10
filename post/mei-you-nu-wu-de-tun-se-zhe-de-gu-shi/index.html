@@ -1,23 +1,219 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-<link rel="stylesheet" href="https://SpookerV5.github.io/media/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
-<link rel="stylesheet" href="https://SpookerV5.github.io/styles/main.css">
-<link rel="stylesheet" href="https://SpookerV5.github.io/media/css/font-awesome.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-<title>Lenger的后花园</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="以下内容含有轻度剧透
+部分图片由于游戏里忘了截图所以用了一些 ign 的实况截图
+现在，你可以在 Lenger的Gallery 观看与此文章内容相关的图片
+前有悲伤，但无畏。
 
+从没有玩过魂类游戏的我只因为听说是开放世界就去试了试，然后刚出..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://SpookerV5.github.io/styles/main.css">
+    <!-- 代码渲染风格css -->
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
+    
+    <!-- 代码高亮插件 -->
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <!-- 代码复制插件 -->
+    <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
+    <!-- live2d插件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <!-- 数学公式 -->
+    
+    <title>没有女巫的褪色者的故事</title>
+
+    <!-- 大纲索引css调整 -->
+    
+    <style>
+        .markdownIt-TOC {
+            margin-left: 28%;
+            padding-left: 2px;
+            width: 80%;
+        }
+
+        .markdownIt-TOC li {
+            padding-left: 8%;
+        }
+    </style>
+    
+</head>
 
 <body>
-
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+    <div id="domainname" style="display:none">https://SpookerV5.github.io</div>
     <div id="content">
-        <div class="nav-large">
-            <div class="row">
-                <!--------------- pc端菜单栏👇 ---------------->
-                <div class="side"><head>
+        <div>
+            <!----------- 移动端导航栏👇 ----------------->
+            <div id="bar">
+                <head>
+  <!-- 引入Bootstrap核心样式文件 -->
+  <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/bootstrap.min.css">
+</head>
+<style>
+  .navmobile {
+    z-index: 15;
+    max-height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .navbar {
+      max-width: 100vw;
+    }
+  }
+
+  @media screen and (max-width:1200px) and (min-width: 768px) {
+    @media (min-width: 768px) {
+      .navbar-nav {
+        float: right;
+        margin: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .mbapspan {
+      padding: 0;
+    }
+  }
+</style>
+<div class="pjaxloading"  onclick="pjaxloadingClose()">
+  <div class="loadingbackground"></div>
+  <div id="loading">
+    <div class="loading">
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
+        aria-expanded="false" id="barbutton">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a data-pjax class="navbar-brand" href="https://SpookerV5.github.io">Lenger的后花园&nbsp;&nbsp;|</a>
+      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
+          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="barmenu">
+      <ul class="nav navbar-nav">
+        
+        
+        <li>
+          <a data-pjax href="/">
+            首页
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/archives">
+            归档
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/tags">
+            标签
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="https://SpookerV5.github.io/post/liu-yan">
+            留言
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/post/about">
+            关于
+          </a>
+        </li>
+        
+        
+        
+        <li><a href="https://spookerv5.github.io/atom" target="_blank">
+            RSS
+          </a></li>
+        
+        
+        
+        <li><a href="https://spookerv6.github.io/" target="_blank">
+            Gallery
+          </a></li>
+        
+        
+        
+        <li><a data-pjax href="https://SpookerV5.github.io/talk">说说</a></li>
+        
+        
+          
+        <li><a data-pjax href="https://SpookerV5.github.io/friends">友链</a></li>
+
+        
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!-- 引入jQuery核心js文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script>
+    let btstate = false;
+    var bt = $("#barbutton");
+    var bm = $("#barmenu");
+    bt.click(function () {
+      dropdown();
+    })
+    function dropdown() {
+      console.log(btstate);
+      //下拉
+      if (btstate == false) {
+        bt.removeClass("collapsed");
+        bt.attr("aria-expanded", "true");
+        bm.attr("aria-expanded", "true")
+        bm.fadeIn(700);
+        btstate = true;
+      }
+      else {
+        bt.addClass("collapsed");
+        bt.attr("aria-expanded", "false");
+        bm.removeClass("in");
+        bm.hide();
+        bm.attr("aria-expanded", "false");
+        btstate = false;
+      }
+    }
+  </script> 
+            </div>
+            <!----------- 移动端导航栏👆 ----------------->
+
+            <!--------------- pc端菜单栏👇 ---------------->
+            <div class="side"><head>
     <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://SpookerV5.github.io/styles/main.css">
     
@@ -942,301 +1138,206 @@ menulist.eq(i).show();
 
 
 </div>
-                <!--------------- pc端菜单栏👆 ---------------->
+            <!--------------- pc端菜单栏👆 ---------------->
 
-                <!----------- 移动端导航栏👇 ----------------->
-                <div class="tbar"> <head>
-  <!-- 引入Bootstrap核心样式文件 -->
-  <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/bootstrap.min.css">
-</head>
-<style>
-  .navmobile {
-    z-index: 15;
-    max-height: 40vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-
-  @media screen and (max-width: 1200px) {
-    .navbar {
-      max-width: 100vw;
-    }
-  }
-
-  @media screen and (max-width:1200px) and (min-width: 768px) {
-    @media (min-width: 768px) {
-      .navbar-nav {
-        float: right;
-        margin: 0;
-      }
-    }
-  }
-
-  @media screen and (max-width:768px) {
-    .mbapspan {
-      padding: 0;
-    }
-  }
-</style>
-<div class="pjaxloading"  onclick="pjaxloadingClose()">
-  <div class="loadingbackground"></div>
-  <div id="loading">
-    <div class="loading">
-    </div>
-  </div>
-</div>
-<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
-        aria-expanded="false" id="barbutton">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a data-pjax class="navbar-brand" href="https://SpookerV5.github.io">Lenger的后花园&nbsp;&nbsp;|</a>
-      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
-          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="barmenu">
-      <ul class="nav navbar-nav">
-        
-        
-        <li>
-          <a data-pjax href="/">
-            首页
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/archives">
-            归档
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/tags">
-            标签
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="https://SpookerV5.github.io/post/liu-yan">
-            留言
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/post/about">
-            关于
-          </a>
-        </li>
-        
-        
-        
-        <li><a href="https://spookerv5.github.io/atom" target="_blank">
-            RSS
-          </a></li>
-        
-        
-        
-        <li><a href="https://spookerv6.github.io/" target="_blank">
-            Gallery
-          </a></li>
-        
-        
-        
-        <li><a data-pjax href="https://SpookerV5.github.io/talk">说说</a></li>
-        
-        
-          
-        <li><a data-pjax href="https://SpookerV5.github.io/friends">友链</a></li>
-
-        
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-
-  <!-- 引入jQuery核心js文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-  <script>
-    let btstate = false;
-    var bt = $("#barbutton");
-    var bm = $("#barmenu");
-    bt.click(function () {
-      dropdown();
-    })
-    function dropdown() {
-      console.log(btstate);
-      //下拉
-      if (btstate == false) {
-        bt.removeClass("collapsed");
-        bt.attr("aria-expanded", "true");
-        bm.attr("aria-expanded", "true")
-        bm.fadeIn(700);
-        btstate = true;
-      }
-      else {
-        bt.addClass("collapsed");
-        bt.attr("aria-expanded", "false");
-        bm.removeClass("in");
-        bm.hide();
-        bm.attr("aria-expanded", "false");
-        btstate = false;
-      }
-    }
-  </script> </div>
-                <!----------- 移动端导航栏👆 ----------------->
-
-                <!-- ----------------左侧菜单栏html 👇-------------------------------------->
-                
-                <div>
-                    <div id="tab1" class="tab">
-                        <div class="bars">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="close"></div>
-                    </div>
-                    <div class="col-lg-3"></div>
-                        <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
-                            <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/font-awesome.css">
-
-<div id="post-container">
-    
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://SpookerV5.github.io/post/2021-nian-du-zong-jie/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://preview.cloud.189.cn/image/imageAction?param=7B56E20B2412F3C3C8A3363626186DA03B7E68E689CE569AF3F9802B72DC35CBD399A01ADA6FFBB62098502DB2E628225C84716E7F7591BD4B751AE62B169D95E9FDCDF0DE13CCFE42C55AC231729529D58E1B37F1B6C2AB600DEF73BF8127364FAB50D846A05E4D8915B8B88BE33D5F" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        2021年度总结
-                    </div>
-                </div>
-            </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2022-01-10</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 6 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://SpookerV5.github.io/tag/qZJ68FMai/" class="postlink">
-                    <i class="fa fa-tag"></i> 年度总结
-                </a>
-                
-            </div>
-        </div>
-        
-</div>
-
-    <div class="postshow postlist">
-        
-        <a data-pjax href="https://SpookerV5.github.io/post/2020-nian-du-zong-jie/" class="apost">
-            <div id="post" style="width:100%">
-                <img src="https://img12.360buyimg.com/ddimg/jfs/t1/158071/28/6297/156775/60240a33E43b55e12/bd905b21d741dc43.jpg" class="postimage">
-                <div class="posttitlebox">
-                    <div class="posttitle">
-                        2020年度总结
-                    </div>
-                </div>
-            </div>
-        </a>
-        <div class="postinfo">
-            <div class="postdate"><i class="fa fa-calendar"></i>2020-12-24</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 5 min read</div>
-            <div class="posttag">
-                
-                <a data-pjax href="https://SpookerV5.github.io/tag/qZJ68FMai/" class="postlink">
-                    <i class="fa fa-tag"></i> 年度总结
-                </a>
-                
-            </div>
-        </div>
-        
-</div>
-
-</div>
-
-                            <div>
-                                <div class="pcpagi">
-    <div class="pagi">
-        <ul>
+            <!-- ----------------左侧菜单栏html 👇-------------------------------------->
             
-            <li><a style="width:100px">&nbsp;</a></li>
+            <div>
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
+                <div class="col-md-1 col-lg-3"></div>
+                <!-- main标签，pjax渲染时加载以下内容👇 -->
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7" style="padding:0;">
+                    <link rel="stylesheet" href="https://SpookerV5.github.io/media/css/font-awesome.css">
+
+<body>
+    <div class="allcontent" id="postdetail">
+        <div class="postshow postpadding" style="padding-bottom: 0;">
             
-                    <li><a id="page1">1</a></li>
-                    <li><a id="page2" class="active">2</a></li>
-                    <li><a id="page3">3</a></li>
+            <div class="postdetailimg">
+                <img src="https://preview.cloud.189.cn/image/imageAction?param=DBB8ACA8D8A94081DFED369F78CE4FD520BD89A930B238999A322CE7005E7B0A36A746919B19DD8FFD8F3C4AB3FA35A7FAA37DDF39FDFBA6A2D6B9826183E82FBB4FEEB8EC4CCCCF8F1F972830C5EE65D28FDBC70B1B79CE0D0A43F04C763AE3C546E0361547DAB96CE56EC69D259ABD" class="postimage" style="cursor:auto">
+            </div>
+            <div class="postinfo-detail">
+                <div class="postdate"><i class="fa fa-calendar"></i>2022-03-10</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 6 min read</div>
+                <div class="posttag">
                     
-            <li><a style="width:100px">&nbsp;</a></li>
+                </div>
+            </div>
             
-                </ul>
+        <div id="articlecontent">
+            <div id="texttitle" style="text-align: center">
+                <h2 id="ptitle">没有女巫的褪色者的故事</h2>
+                <!-- id 将作为查询条件 -->
+                <div id="pl" style="display:none">https://SpookerV5.github.io/post/mei-you-nu-wu-de-tun-se-zhe-de-gu-shi/</div>
+                <div id="rootaddr" style="display:none">https://SpookerV5.github.io</div>
+                
+                    
+                    <h4><i class="fa fa-eye" aria-hidden="true" style="color: #FF8C00;"></i>&nbsp;&nbsp;热度</i>: <span id="twikoo_visitors" class="hotnum">loading...</span></h4>
+                    
+                
+            </div>
+            <div class="text ">
+                <p>以下内容含有轻度剧透</p>
+<p>部分图片由于游戏里忘了截图所以用了一些 ign 的实况截图</p>
+<p>现在，你可以在<a href="https://spookerv6.github.io/"> Lenger的Gallery </a>观看与此文章内容相关的图片</p>
+<p>前有悲伤，但无畏。</p>
+<hr>
+<p>从没有玩过魂类游戏的我只因为听说是开放世界就去试了试，然后刚出门就跳下了山崖.jpg</p>
+<p>好吧我玩过的开放世界游戏其实也不多，想想也就只有野炊了，野炊的世界几乎满足了我对于开放世界的所有需求，除了野炊在 Switch 上感人的分辨率之外，虽然现在可以使用 Cemu 来以很高的分辨率游玩，但是却找不回刚开始玩时的快乐，这也果然应了那句话——不要去救公主，否则你的游戏会索然无味。而魂类游戏，宫崎英高，也就是之前看看室友玩只狼和黑魂，没错就只是看看，魂类游戏自带的哥特中世纪氛围和背刺陷阱让我迟迟不想游玩，将这类游戏说为受苦之旅也毫不为错，但是一旦游戏是开放世界，玩法就会变得多样，所以还是选择到《艾尔登法环》的世界看看，顺便领教下宫崎英高的阴谋。</p>
+<figure data-type="image" tabindex="1"><img src="https://preview.cloud.189.cn/image/imageAction?param=C31EA1DEBB75A6A199948F1E5EA0FB92C9B980C8D14F474CF4D1DB1A08A6462BBE029D082BB477DBCAE3EA7604EA8044228AA7787F9407E79C67F97E0807EF9AB11DD815AF369392447FC8EF70894D33752F969589AF0F9E866D9C28E336DA6B8249473AAAB3E302725F9642B6B7921F" alt="" loading="lazy"></figure>
+<p>当然全款是不可能全款的，万一之后没兴趣了又不能像卡带一样出了回血，所以找个闲鱼的家庭共享，只要 ￥42 就能游玩并且联机独立存档，只要不换电脑就行（g 胖、宫崎英高：？！）</p>
+<p>开局仍然是经典的选择职业，当然对于我这种新手来说，什么居合、盾反都不知道（好吧盾反是知道的，但是老头环的盾反完全不是野炊那么回事！），当然还是选择法师远程 biu 人比较好，然后就兴高采烈地出发，然后就摔下了悬崖（x，好吧一番努力后还是通过了新手试炼，摊牌了骑士小怪 boss 我打了 3 次（x</p>
+<p>出门会遇见一个嘲讽我的白面具灰心哥，当然不知道魂类不能乱杀  npc 的我直接就是砍了3刀，然后被他追了杀了不下 5 次，<s>所以掉帧守卫不一定就是你的第一个 boss（x</s></p>
+<figure data-type="image" tabindex="2"><img src="https://preview.cloud.189.cn/image/imageAction?param=8000A9782EFC978A76D3399218A40BA36D841C42B648BD2CA9E1F8BECA827E6430289BE82A1CC7CFE29EFBF80DF0AE08D796D6B3DCA0159999C06BA46930E4876FD6F99F8743F6966435E202BF6067AB27C55AF912B66FC1D6A46BA2DBD0D3A7B37E6E7ED697C67DE5C5B097CC6A6D00" alt="" loading="lazy"></figure>
+<p>可以说老头环的指引比野炊还少，出了门之后就不知道往哪里走了，看了看别人的实况，原来夜晚在关卡前坐篝火可以见到梅琳娜，本作的防环女，还能得到灵马，这一点比野炊方便，开局就有马，探索大世界舒服多了（后来我才知道这是我为数不多见到梅琳娜的机会x</p>
+<p>然后在教堂的夜晚会看见魔女小姐姐，对话完了送了个招魂铃铛，能召唤出三只狼，蕾拉小姐姐还是比较好看的（后来才知道人家真名叫拉妮x</p>
+<figure data-type="image" tabindex="3"><img src="https://preview.cloud.189.cn/image/imageAction?param=71A961F4DDCD608B28DB98B897834AC4871DA8CEB32BA6C9219CE244C167B511006FB11A8ACCF359F7E2ECB86668B40E6C95B6946AC99D05FBD1F5031B5A3B2CAB68C2E9FEAAED6057C5CE2D5A7F8E3139B4AA3C9EEB8799152F8EA73AEAAB650DDB437B8FA0D23B8F632DDFB5507AA8" alt="" loading="lazy"></figure>
+<p>于是就更加迷茫了，随便逛逛就会被一堆怪发现，好在灵马跑的很快，于是就到处开赐福，不知不觉就遇见了龙，当然这里的龙没有野炊的龙一样友善，喷火都喷的老远，回来又被大树守卫虐到，近乎于放弃的我终于还是点开了实况，看看别的up主如何在前期生存。</p>
+<p>不看不知道，原来这个游戏隐藏了很多好东西，比如在飞龙旁边的地下洞穴有个宝箱，是传送陷阱，可以传送到很远的结晶矿洞，出矿洞后可以捡到陨石术和陨石法杖，使用了一下伤害直接大幅提高，顺便还能捡到旅行套装，比出生的衣服还是好看了不少的，所以真正的游戏之旅从此开始。</p>
+<figure data-type="image" tabindex="4"><img src="https://preview.cloud.189.cn/image/imageAction?param=92E2D1CC762BEA2F78361262F8AF738F54CD3C9D8BD7F8695029B969D77C1B47C1C3911D0EA6E934E407DF17C2D5C3B0A653CA90705AAD195C65A801747F6353B665609417B6695B19607E93BE3B5BFEE82E8B39E23E955CEB67C47A378CEC447D623C724B54EB691FEB76CEFC170669" alt="" loading="lazy"></figure>
+<p>大树守卫，玩家一般要杀死的第一个 Boss ，对于法师来说，有了陨石术后只需要站在教堂的台阶上，守卫打不到，会直接变成靶子。而之前喷火的飞龙亚基尔，只需要骑马站在旁边的斜坡高处，也成为了法师的活靶子。我明白了这款游戏对于我这种新入坑玩家的包容，几乎所有的 Boss 都有所谓的逃课方法，比如隔着雾门放法术可以造成伤害，比如召唤 npc，比如获得毒雾这种战技或者是黑夜女巫烟雾神不知鬼不觉毒死 Boss，还有体大弱门，利用这个规律可以把巨人这种近战很有压迫感的敌人变成靶子。对于新人来说这种设计实在高明，让我没有游戏经验也可以有很好的体验。</p>
+<p>于是探险的欲望在游戏中停不下来，从截肢葛瑞克到满月女王，我体会到这款游戏的制作精良，但是同时当我专注于故事，我却发现游戏里一切都带有浓郁的悲伤。盖利德地区魔法镇的门口遇见的 npc，他自称是断臂女孩的义父，让我取银针去救女孩，当我取到后救治女孩，不小心打到他时却发现他是虫子变得。摩恩城门口送信的女孩，无论如何都无法拯救她的生命，而帮助我们击败血指的尤拉，会在玛丽卡教堂门口倒地不起，唯有一个奸诈的帕奇，这是一个复杂的角色，时而为敌，时而也帮助，可能在这乱世中，奸诈才是长久的生存之道。</p>
+<figure data-type="image" tabindex="5"><img src="https://preview.cloud.189.cn/image/imageAction?param=249526E60B4984F36F6729FB9D9D18E2D7F4F79CC0765640291A66FD35B01BC81EF12093BF714FD729AC0CF8AEBEE72F7D68986E2ED105995ACD7A9871DDCDE3D18F93ED9059628F7D1F64CDDD890569769E27F46366FC56CD1EA91457C8BF692AE08DDC5AEF7FBD955EFDCAB638A4DE" alt="" loading="lazy"></figure>
+<p>游戏的背后纵使隐藏着巨大的悲伤，每位褪色者仍旧在苦难中前进，并不断变强，一遍又一遍挑战着神的威信。没有女巫的褪色者，没有指引的玩家，天作之合。在游戏中，平凡无奇的小人物可能比 Boss 更加危险，最终玩家的选择会决定世界的未来，但在那之前，要体会何为死亡，何为迷失。</p>
+<p>当我回到自己出生的地方，看见了之前从未注意的尸体，我忽然间意识到，原来属于我的指头女巫早已离开了我，没有女巫的褪色者，没有褪色者的女巫，命运以最讽刺的方式开了褪色者一个天大的玩笑，找遍交界地也寻不到的女巫一直都躺在褪色者第一次醒来的地方...</p>
+<p>而地上写下的讯息，是对所有褪色者的祝福：<strong>即使引导早已破碎，也请您当上艾尔登之王。</strong></p>
+
+            </div>
+            <hr style="width: 80%;">
+            
+            <div class="donateContainer">
+                <span class="donatebtn">赏</span>
+            </div>
+            <div class="donateContainer">
+                <img src="https://i.loli.net/2021/01/22/L1q2Xzi6IjB9Jpm.png" alt="" class="donate">
+            </div>
+            
+            <div class="postfooter">
+                <ul class="post-copyright">
+                    <li><strong>文章作者：</strong>Lenger</li>
+            <li><strong>原文链接：</strong>https://SpookerV5.github.io/post/mei-you-nu-wu-de-tun-se-zhe-de-gu-shi/</li>
+            <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
+                许可协议。转载请注明出处！</li>
+            </ul>
+        </div>
+        
+            <div class="shareContainer">
+                <div class="share" style="height:30px;background: white;">
+                    <a class="qq" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/qqs.png" alt=""></i></a>
+                    <a class="wechat" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/wechats.png" alt=""></i></a>
+                    <a class="weibo" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/weibos.png" alt=""></i></a>
+                    <a class="qzone" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/qzones.png" alt=""></i></a>
+                    <a class="douban" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/doubans.png" alt=""></i></a>
+                    <a class="facebook" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/facebooks.png" alt=""></i></a>
+                    <a class="twitter" href=""><i><img class="shareicon"
+                                src="https://SpookerV5.github.io/media/images/twitter.png" alt=""></i></a>
+                </div>
+            </div>
+            
+        <div id="otherpost">
+            
+            
+            <a data-pjax class="next-post-pc" href="https://SpookerV5.github.io/post/opus1-kai-xiang-yu-er-ji-man-tan/"  style="color: black;">
+                <div id="npcontainer">
+                    
+                    <img src="https://preview.cloud.189.cn/image/imageAction?param=CC5B6D9F2F00DD5706B42B0AF13CB11DFD040B10D6F4DEA674AF8037B458C72C5E581275AC7FB4D40DC38C5199ED4F7890F031FB5EE299DB4339152F6737C299BB6FC18772C81F8081C4571473ED7B107F696FE109CBFDD45CDEABDA2CEBF478FC51B2533C2D3CA312EE68B9C04E9992" style="width: 100%;" class="opimg">
+                    
+                    <h4 class="optitle">Opus#1 开箱与耳机漫谈</h4>
+                </div>
+            </a>
+            <div class="next-post">
+                下一篇 <a  data-pjax href="https://SpookerV5.github.io/post/opus1-kai-xiang-yu-er-ji-man-tan/">Opus#1 开箱与耳机漫谈</a>
+            </div>
+            
+        </div>
     </div>
-</div>
-
-<div id="pagination-prev" style="display:none"> 
-</div>
-<div id="pagination-next" style="display:none"> </div>
-
-<div class="pagination-container">
-      
-    
-</div>
-
+    </div>
+    </div>
+    <!-- 弹窗 -->
+    <div id="myModal" class="modal">
+        <img class="modal-content" id="img01">
+    </div>
+</body>
 <script>
-    var prevstr = document.getElementById("pagination-prev").innerHTML;
-    var nextstr = document.getElementById("pagination-next").innerHTML;
-    var page1 = document.getElementById("page1");
-    var page2 = document.getElementById("page2");
-    var page3 = document.getElementById("page3");
-    page1.innerHTML = '-';
-    page2.innerHTML = '1';
-    page3.innerHTML = '-';
-    if (prevstr.length > 5) {
-        if (prevstr.indexOf("page/") != -1) {
-            var prevnum = parseInt(prevstr.split("page/")[1]);
-            page1.innerHTML = prevnum;
-            page2.innerHTML = prevnum + 1;
-        } else {
-            page1.innerHTML = 1;
-            page2.innerHTML = 2;
-        }
-    }
-    if (nextstr.indexOf("page/") != -1) {
-        var nextnum = parseInt(nextstr.split("page/")[1]);
-        page3.innerHTML = nextnum;
-        page2.innerHTML = nextnum - 1;
-    }
+    //文章阅读热度
+    var pl = $("#pl").html();
+    var rootaddr = $("#rootaddr").html();
+    pl = pl.replace(rootaddr, "");
+    $("#hotnum").attr('id', pl);
 </script>
-                                <div style="padding-bottom:10%"></div>
+                    <div class="toc-container">
+                        
+                    </div>
+                    <div class="tog">
+                        <div class="toggleContainer">
+                            <div class="toggle">
+                                <i class="fas fa-angle-double-up"></i>
                             </div>
                         </div>
-                        <div class="col-lg-2"></div>
+                    </div>
+                    <!---------------------------- 评论系统👇 ------------------------->
+                    <div id="comment" class="comment">
+                        <div class="commentcontainer">
+                            
+                                
+                                    <!-- 文章热度功能和评论整合 -->
+<style>
+  .twikoo p {text-align: left;}
+</style>
+<body>
+<div id="tcomment"></div>
+</body>
+<script>
+twikoo.init({
+  envId: 'twikoo-7gf7cuky0e8a2f7c',
+  el: '#tcomment',
+  // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，如果您的环境地域不是上海，需传此参数
+  // path: 'window.location.pathname', // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+})
+</script>
+
+<script>
+  var appid = '0MOznRcTibDlG5kCtdFMvU5z-MdYXbMMI';
+  var appkey = '27bf126FMrmX3jEmYRvU1tai';
+  if(typeof(AVinit)=="undefined"){
+    AV.init({
+      appId: appid,
+      appKey: appkey
+  });
+  AVinit = true;
+}
+</script>
+                                    <div class="clear"></div>
+                                
+                            
+                        </div>
+                    </div>
+                    <!---------------------------- 评论系统👆 ------------------------->
                 </div>
-                <!-- ----------------左侧菜单栏html 👆-------------------------------------->
-                
-                <!------------------ 顶部菜单栏html👇--------->
-                
-                <!------------------ 顶部菜单栏html👆--------->
+                <!-- main标签，pjax渲染时加载以上内容👆 -->
+                <div class="col-md-1 col-lg-2"></div>
+                <div id="bg">
+                </div>
             </div>
+            <!-- ----------------左侧菜单栏html 👆-------------------------------------->
             
-                        <head>
+        </div>
+        <!-- aplayer播放器加载👇 -->
+            
+            <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 </head>
 
@@ -1299,29 +1400,38 @@ menulist.eq(i).show();
     }
 </script>
             
-        </div>
-        <div id="bg">
-        </div>
-        <!------- 背景图加载方式👇----- -->
-        <div id="bgchoice" style="display: none">link
-                    </div>
-                    
-                    <div id="bgurl" style="display:none">https://www.dmoe.cc/random.php</div>
-                       
-        </div>
-        <!------- 背景图加载方式👆 --------------->
-</div>
-</div>
+        <!-- aplayer播放器加载👆 -->
+    </div>
+    
 
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-        </div>
-        <div id="domainname" style="display:none">https://SpookerV5.github.io
+    <!-- 背景图加载方式👇 -->
+    <div id="bgchoice" style="display: none">link
                 </div>
+                
+                <div id="bgurl" style="display:none">https://www.dmoe.cc/random.php</div>
+                
+    <!-- 背景图加载方式👆 -->
 </body>
-</html>
-<!-------------------- live2d功能👇 --------------------------->
+
+<script>
+    //初始化
+    //更换twikoo头像
+    setTimeout(replaceAvatar,1000);
+    setTimeout(replaceAvatar,2000);
+    setTimeout(replaceAvatar,8000);
+    // --------为每张图片添加懒加载（lazyload）标签-->懒加载功能 👇------------
+    lazyload();
+    //为文章内所有代码块添加代码复制功能 👇
+    codeinit();
+    // ------代码高亮显示功能-------------
+    hljs.initHighlightingOnLoad();
+    if (shareChoice)
+        shareInit();
+    if (donateChoice)
+        donateInit();
+</script>
+
+<!------------------ 加载live2d模型功能（看板娘）👇 ---------------->
 
 <script type="text/javascript">
     var message_Path = '/live2d/'
@@ -1333,7 +1443,29 @@ menulist.eq(i).show();
     loadlive2d("live2d", "https://SpookerV5.github.io/media/live2d/assets/tororo.model.json");
 </script>
 
-<!-------------------- live2d功能👆--------------------------->
+<!------------------ 加载live2d模型功能（看板娘）👆 ---------------->
+
+
+<!----------------------- 返回顶部按钮功能👇 --------------------->
+<script>
+    $(function () {
+        $('.toggleContainer').click(function () {
+            $('html,body').animate({
+                scrollTop: '0px'
+            }, 800);
+        });
+        $(window).scroll(function () {
+            var st = $(window).scrollTop();
+            if (st > 30) {
+                $(".toggleContainer").fadeIn(400);
+            } else {
+                $(".toggleContainer").fadeOut(100);
+            }
+        });
+    });
+</script>
+<!----------------------- 返回顶部按钮功能👆 --------------------->
+
 
 <!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 <script>
@@ -1355,4 +1487,28 @@ menulist.eq(i).show();
 <!------------ 加载全局背景图功能👆（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 
 
+
+
 <script src="https://SpookerV5.github.io/media/js/index.js"></script>
+
+
+<script>
+    //加载后的事件同步（阅读量、移动端评论等
+    window.onload = function () {
+    //代码块高亮渲染
+    document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+    });
+        getHotnum();
+        var sharepc = $(".share").eq(0).html();
+        $(".share").eq(1).html(sharepc);   //插件只会寻找一个分享标签渲染，所以需要手动添加到移动端
+        aplayerbtnInit();
+        $(".hljs").css({
+            "padding": "20px"
+        })
+    }
+</script>
+
+<!-- <script src="https://SpookerV5.github.io/media/js/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.13.0/dist/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.6.1/dist/av-live-query-min.js"></script> -->
